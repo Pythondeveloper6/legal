@@ -27,6 +27,9 @@ This policy covers the Skillet iOS app. It does not cover Apple's own services
   to any cloud service.</li>
 <li>There are <strong>no accounts, no analytics, no advertising, and no third-party
   trackers</strong>.</li>
+<li>If you subscribe to Skillet Plus, <strong>Apple</strong> handles the payment.
+  Skillet never sees your payment method, and it keeps only a local yes/no record
+  of whether the subscription is active.</li>
 </ul>
 <p>Skillet's App Store privacy label is <strong>Data Not Collected</strong>: no data
 is collected by the developer, and none is linked to you or used to track you.</p>
@@ -35,9 +38,14 @@ is collected by the developer, and none is linked to you or used to track you.</
 Lunch, Dinner, or any you add), meals and their ingredients, your weekly plan,
 and the shopping list Skillet builds from it — is saved locally using Apple's
 on-device database (Core Data). It stays on that device. This version of Skillet
-has <strong>no cloud sync, no server, no account, no sign-in, and no network
-features of any kind</strong>: the app works entirely offline, and it never
-transmits your content off the device.</p>
+has <strong>no cloud sync, no server, no account, and no sign-in</strong>. Apart
+from Apple's own in-app purchase sheet, which appears only if you choose to
+subscribe, the app makes no network request at all: it works entirely offline,
+and it never transmits your content off the device.</p>
+<p>If you subscribe to Skillet Plus, the app also stores a single local flag
+recording whether the subscription is currently active. It is a yes-or-no value
+kept on the device alongside your settings, and it holds nothing about you and
+nothing about your payment.</p>
 <p>Sync is not part of this version. If optional sync through your own private
 iCloud account is ever added, this policy will be updated in the same release,
 and the data would still be controlled by you and your Apple ID rather than by
@@ -45,9 +53,35 @@ the developer.</p>
 <p>Skillet does not include any non-Apple SDKs that collect data. It does not use
 your location, your contacts, your camera, or your photo library.</p>
 <h2>Apple services Skillet relies on</h2>
-<p><strong>None.</strong> Skillet uses no Apple online service and no third-party
-service. The only Apple involvement is the App Store distributing the app to
-you, which is governed by Apple's own privacy policy linked above.</p>
+<p>Two, both of them Apple's own, and neither of them a place your content goes:</p>
+<ul>
+<li><strong>The App Store</strong>, which distributes the app to you.</li>
+<li><strong>Apple's In-App Purchase system (StoreKit)</strong>, and only if you
+  choose to subscribe to Skillet Plus — see the next section.</li>
+</ul>
+<p>Skillet uses no other Apple online service, and no third-party service of any
+kind. Apple's part is governed by Apple's own privacy policy, linked above.</p>
+<h2>Purchases and subscriptions</h2>
+<p>Skillet Plus is an optional auto-renewable subscription. If you buy one, the
+entire transaction belongs to <strong>Apple</strong> and happens in Apple's own
+purchase sheet:</p>
+<ul>
+<li><strong>Apple processes the payment.</strong> The developer is not part of
+  the transaction.</li>
+<li><strong>Skillet never sees your payment method.</strong> No card number, no
+  billing address, no Apple Account email, no name, and no receipt or order
+  details reach the app or the developer. There is nothing of the sort for
+  Skillet to store, and it stores none of it.</li>
+<li><strong>All Skillet learns is yes or no</strong> — whether an active
+  subscription entitles this device to the Plus features. That answer is kept on
+  the device as a local flag, exactly like your meals and your plan.</li>
+<li><strong>Skillet transmits nothing about your purchase.</strong> The app has
+  no server of its own and makes no network request of its own, so no purchase
+  information is sent to the developer or to anyone else.</li>
+</ul>
+<p>Adding the subscription therefore does not change Skillet's App Store privacy
+label. It stays <strong>Data Not Collected</strong>: the app collects nothing,
+transmits nothing, and links nothing to you.</p>
 <h2>Your control</h2>
 <ul>
 <li>You can edit or delete any meal, planned meal, or shopping item at any time
