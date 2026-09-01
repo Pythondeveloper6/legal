@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pass &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Pass</a>
+<h1>Pass — Privacy Policy</h1>
+<p><em>Last updated: 25 June 2026</em></p>
+<p>Pass is built so the things you keep stay yours. This policy explains what the app
+does and does not do with your information.</p>
+<h2>The short version</h2>
+<ul>
+<li>By default, Pass does <strong>not</strong> collect, transmit, sell, or share your data.</li>
+<li>Your cards — titles, notes, details, links, and photos — are stored <strong>on your
+  device</strong> and, if you’re signed in to iCloud, synced through <strong>your own private
+  iCloud account</strong>. The developer has no access to them.</li>
+<li>There are <strong>no analytics, no advertising, and no third‑party trackers</strong>.</li>
+<li>Sharing a card with another person is <strong>optional and off by default</strong>. It only
+  transmits data when you turn it on and actively choose to share a card.</li>
+</ul>
+<h2>What Pass stores</h2>
+<p>Everything you create in Pass (card titles, notes, custom detail fields, links, photos
+and files, accent colors, and pins) is saved locally using Apple’s on‑device database.
+If iCloud is enabled on your device, this data also syncs via Apple’s <strong>CloudKit</strong> to
+your private iCloud account so it’s available on your other devices. This data is
+controlled by you and your Apple ID; the developer cannot see or retrieve it.</p>
+<h2>Apple services Pass relies on</h2>
+<ul>
+<li><strong>iCloud / CloudKit</strong> — to sync and back up your cards within your own account.</li>
+<li><strong>StoreKit</strong> — when you purchase Pass Pro, the transaction is processed by Apple.
+  Pass never receives your payment details.</li>
+<li><strong>Sign in with Apple</strong> — used only if you enable username sharing (see below), to
+  create the account that identifies you to people you share with.</li>
+</ul>
+<p>Pass does not include any advertising or analytics SDKs.</p>
+<h2>Optional username sharing</h2>
+<p>Pass includes an <strong>optional, off‑by‑default</strong> feature that lets you share a card with
+another Pass user by username. This feature is only available if the app has been
+configured with a sharing backend, and it does nothing until you sign in and choose to
+share a specific card.</p>
+<p>When you <strong>enable sharing and share a card</strong>, the following is sent to the sharing
+backend (a Supabase project operated by the developer) so the recipient can receive it:</p>
+<ul>
+<li>A profile for your account: your <strong>username</strong>, optional <strong>display name</strong>, and the
+  identifier from <strong>Sign in with Apple</strong>. (Apple’s private‑relay option means the
+  developer need not receive your real email address.)</li>
+<li>For each card you choose to share: its <strong>title and notes</strong>, the <strong>recipient’s
+  username</strong>, and the <strong>permission</strong> you grant (view or edit).</li>
+<li>The sharing <strong>status</strong> of each shared card (active or paused).</li>
+</ul>
+<p>What is <strong>not</strong> sent, for any card, ever: your <strong>custom detail fields</strong> (labels and
+values), your <strong>saved links</strong>, your <strong>photos and file attachments</strong>, a card's <strong>accent
+colour or pin</strong>, its <strong>created/updated history</strong>, and every card you did not explicitly
+choose to share. Cards you never share never leave your device and iCloud.</p>
+<p>Sharing publishes a <strong>snapshot, not a live sync.</strong> Edits you make after sharing stay on
+your device until you choose to send the card again.</p>
+<p>You can pause or stop sharing a card at any time, and you can decline cards shared with
+you. Stopping a share deletes the published copy from the backend. If you never enable
+sharing, none of your data is ever sent to the backend.</p>
+<h3>Your session</h3>
+<p>If you sign in, the credential that keeps you signed in is held in the device
+<strong>Keychain</strong>, marked as readable only while the device is unlocked and only on that
+device — it is not written to app preferences, not included in encrypted backups, and
+not synced through iCloud Keychain. Signing out deletes it from the device and ends the
+session on the server.</p>
+<h2>Photos</h2>
+<p>Pass only accesses the specific photos you choose through the system photo picker. It
+does not read your photo library beyond the items you pick.</p>
+<h2>How long anything is kept</h2>
+<ul>
+<li><strong>On your device / in your iCloud:</strong> for as long as you keep the card.</li>
+<li><strong>On the sharing backend:</strong> a published card exists only while you share it. Stop
+  sharing, or delete your account, and it is deleted.</li>
+<li>Nothing is retained for analytics, because there are none.</li>
+</ul>
+<h2>Your control</h2>
+<ul>
+<li><strong>Export.</strong> Settings → “Export all cards” produces a readable JSON file with every
+  card, in order. It is free and needs no account.</li>
+<li>You can delete any card, or all cards, at any time inside the app
+  (a card’s menu, or Settings → “Delete all cards”).</li>
+<li>You can stop sharing a card at any time; the published copy is deleted with it.</li>
+<li><strong>Delete your account.</strong> If you signed in for sharing, Settings → Account &amp; username
+  → “Delete account” permanently removes your username, every card you published, and
+  your sign‑in record. Your cards on the device are not touched by it.</li>
+<li>Deleting the app removes its local data from your device. iCloud copies are managed
+  through your Apple ID settings.</li>
+</ul>
+<h2>Children</h2>
+<p>Pass does not collect personal information from anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the “Last updated” date above will change accordingly.</p>
+<h2>Contact</h2>
+<p>Questions about privacy? Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<footer>
+  <p>Pass &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

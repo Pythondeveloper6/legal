@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trove &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Trove</a>
+<h1>Trove — Privacy Policy</h1>
+<p><strong>Effective date: 1 September 2026</strong></p>
+<p>Trove is a home-inventory app. This policy explains, specifically, what
+information Trove handles, how it is handled, and what it is used for.</p>
+<p>The summary is short because the app is: <strong>Trove has no servers and no network
+layer.</strong> It never sends your information anywhere. Everything below is detail
+supporting that sentence.</p>
+<hr />
+<h2>1. The short version</h2>
+<ul>
+<li>Trove <strong>does not collect</strong> your personal data. Nothing you put into the app is
+  transmitted to the developer or to any third party.</li>
+<li>Your inventory lives <strong>on your device</strong>, and — only if you have iCloud turned
+  on — in <strong>your own private iCloud account</strong>. The developer cannot see it,
+  cannot retrieve it, and has no access to your iCloud account.</li>
+<li>There are <strong>no analytics, no advertising, no tracking, and no third-party
+  SDKs</strong> of any kind. Trove asks no App Tracking Transparency permission because
+  it does no tracking.</li>
+<li>Signing in with Apple is <strong>entirely optional</strong>. It stores an identity on your
+  device only, syncs nothing, and unlocks nothing. Every feature of Trove works
+  without it.</li>
+<li>Payments are handled by Apple. Trove never sees your payment details.</li>
+</ul>
+<hr />
+<h2>2. What Trove stores, and where</h2>
+<h3>2.1 Your inventory</h3>
+<p>Everything you create in Trove — item names, quantities and units, values,
+purchase dates, expiry dates, low-stock thresholds, barcodes, tags, notes,
+locations and the way you nest them, item photos, and receipt or label photos —
+is saved in an on-device database using Apple's SwiftData framework.</p>
+<p>If iCloud is enabled on your device, that same database also syncs through
+Apple's CloudKit to <strong>your own private iCloud database</strong>. This is your storage,
+inside your Apple Account. The developer has no CloudKit access to it, receives
+no copy of it, and cannot read, export or delete it.</p>
+<p>If iCloud is unavailable or turned off, Trove falls back to a purely local
+store and keeps working.</p>
+<p><strong>Used for:</strong> running the app — displaying, searching, totalling and reminding
+you about your own inventory. Nothing else. It is never analysed, aggregated,
+shared, or sold.</p>
+<h3>2.2 Photos</h3>
+<p>Trove imports a photo only when you explicitly pick one:</p>
+<ul>
+<li><strong>Camera</strong> — when you tap the camera button on an item, or open the barcode
+  scanner. Trove does not open the camera at any other time and never records
+  video or audio.</li>
+<li><strong>Photo library</strong> — when you tap to choose a picture through the system photo
+  picker. Only the images you select are copied into Trove. The app does not
+  read, list, or scan the rest of your library, and it never writes anything
+  back to your library.</li>
+</ul>
+<p>Imported photos are resized and stored alongside the item they belong to, in the
+same on-device / private-iCloud database described above.</p>
+<p><strong>Used for:</strong> showing you a picture of your own item or its receipt.</p>
+<h3>2.3 The optional Sign in with Apple identity</h3>
+<p>Trove offers Sign in with Apple. It is <strong>optional and gates nothing</strong> — there is
+no feature, free or paid, that requires it. It exists only so you can attach a
+name to the app if you want one.</p>
+<p>If you use it, Apple gives Trove:</p>
+<ul>
+<li>a <strong>user identifier</strong> — an opaque string Apple generates for this app;</li>
+<li>optionally, the <strong>name</strong> you choose to share at the moment you first
+  authorise;</li>
+<li>optionally, an <strong>email address</strong>. If you choose "Hide My Email", Apple gives
+  Trove a private relay address rather than your real one, so in many cases the
+  developer would not see a real inbox even in principle.</li>
+</ul>
+<p>Trove writes these values to the <strong>device Keychain</strong> and reads them back only on
+that device. They are:</p>
+<ul>
+<li>never transmitted anywhere — Trove has no network code that could transmit
+  them;</li>
+<li>never attached to, or stored with, your inventory data;</li>
+<li>never used to identify you across apps, devices or services;</li>
+<li>never shared with anyone.</li>
+</ul>
+<p><strong>Used for:</strong> displaying your name in the app's account screen and remembering
+that you chose to sign in. That is the whole of it.</p>
+<p>Because this data never leaves your device, Trove's App Store privacy label
+reports "Data Not Collected".</p>
+<h3>2.4 Purchases</h3>
+<p>Trove Plus is sold through Apple's In-App Purchase system. Apple processes the
+transaction; Trove uses StoreKit only to ask "does this Apple Account own Trove
+Plus right now?" and to show the price Apple supplies.</p>
+<p>Trove <strong>never receives</strong> your payment card, billing address, Apple Account
+credentials, or purchase history for anything other than Trove Plus. Apple's own
+handling of your purchase is covered by
+<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+<p>Trove stores a small local record of your current entitlement so the app knows
+you are a subscriber when it launches without a connection. That record contains
+the product identifier and its renewal date, nothing personal, and it stays on
+your device.</p>
+<p><strong>Used for:</strong> unlocking the features you paid for, and restoring them.</p>
+<h3>2.5 Settings</h3>
+<p>Trove keeps a handful of preferences in the standard iOS preferences store:
+your reminder lead time, your light/dark appearance choice, and whether you have
+seen onboarding. The reminder lead time is also mirrored into a <strong>shared App
+Group container</strong> (<code>group.com.trove.app</code>) so the Home Screen widget can read it.
+That container is private to Trove and its own widget; no other app can read it.</p>
+<p><strong>Used for:</strong> remembering how you like the app set up.</p>
+<h3>2.6 Notifications</h3>
+<p>Expiry reminders and low-stock alerts are <strong>local notifications</strong>, scheduled by
+Trove on your device and delivered by iOS. Nothing is sent to a server; there is
+no push notification service involved and Trove has no push capability. Denying
+or revoking notification permission affects only whether those reminders appear.</p>
+<p><strong>Used for:</strong> telling you an item is about to expire or is running low.</p>
+<hr />
+<h2>3. What Trove does <em>not</em> do</h2>
+<ul>
+<li>No analytics or telemetry of any kind.</li>
+<li>No advertising, no ad identifiers, no IDFA, no ad networks.</li>
+<li>No tracking, no cross-app or cross-site profiling, no data brokers.</li>
+<li>No third-party SDKs. Trove links only Apple's own frameworks and its own code.</li>
+<li>No accounts on a server. There is no Trove server.</li>
+<li>No selling or sharing of your information. There is nothing to sell.</li>
+<li>No health data. Trove does not use HealthKit and requests no health
+  information.</li>
+</ul>
+<hr />
+<h2>4. Keeping your information, and deleting it</h2>
+<p>Trove keeps your information for exactly as long as you keep it. There is no
+retention schedule on the developer's side because the developer holds nothing.</p>
+<h3>4.1 Deleting inventory data</h3>
+<ul>
+<li><strong>One item or location:</strong> swipe it away, or open it and delete it.</li>
+<li><strong>Everything:</strong> Settings → Data → <strong>Delete all items &amp; locations</strong>. This
+  removes every item, location and photo from the on-device store, and the
+  deletion propagates to your private iCloud copy on your other devices.</li>
+<li><strong>The whole app:</strong> deleting Trove from your device removes its local database,
+  its App Group container and its Keychain items.</li>
+</ul>
+<p>Copies held in your own iCloud account are managed by you, through
+<strong>Settings → your name → iCloud → Manage Account Storage</strong>.</p>
+<h3>4.2 Deleting your Trove account</h3>
+<p>If you signed in with Apple, you can remove that identity from inside the app:</p>
+<p><strong>Settings → Account → Delete Account.</strong></p>
+<p>This erases the stored Apple user identifier, name and email from the device
+Keychain and returns the app to its signed-out state. It takes effect
+immediately and there is nothing left on any server, because there is no server.</p>
+<p><strong>One step only you can do.</strong> Because Trove has no backend, it cannot call
+Apple's server-side token-revocation endpoint on your behalf — that call
+requires a server holding a private key, and Trove has none. To also remove
+Apple's own record that you used Sign in with Apple for Trove, go to:</p>
+<p><strong>iOS Settings → your name → Sign in with Apple → Trove → Stop Using Apple
+Account.</strong></p>
+<p>That step is Apple's to perform and is available to you at any time.</p>
+<h3>4.3 Withdrawing permissions</h3>
+<p>You can revoke any permission you granted, at any time, without uninstalling:</p>
+<ul>
+<li>Camera and Photos: <strong>iOS Settings → Privacy &amp; Security → Camera / Photos</strong>, or
+  <strong>iOS Settings → Trove</strong>.</li>
+<li>Notifications: <strong>iOS Settings → Notifications → Trove</strong>.</li>
+<li>iCloud sync: <strong>iOS Settings → your name → iCloud → Apps Using iCloud</strong>.</li>
+<li>Sign in with Apple: delete your account in Trove as above, and use "Stop
+  Using Apple Account" in iOS Settings.</li>
+</ul>
+<p>Revoking a permission disables the feature that needed it. It never deletes
+inventory you already saved.</p>
+<hr />
+<h2>5. Children</h2>
+<p>Trove is rated 4+ and is suitable for general audiences. It collects no personal
+information from anyone, including children, and contains no ads, no third-party
+content, and no way to communicate with other people.</p>
+<h2>6. Security</h2>
+<p>Your inventory is protected by iOS Data Protection on your device, and by
+Apple's own encryption in transit and at rest when it syncs through your private
+iCloud database. The optional Sign in with Apple identity is stored in the
+device Keychain. Trove implements no cryptography of its own and relies entirely
+on these Apple-provided protections.</p>
+<h2>7. Changes to this policy</h2>
+<p>If this policy changes, the effective date at the top will change with it, and
+the updated policy will be published at the same address. Material changes will
+be described in the app's release notes.</p>
+<h2>8. Contact</h2>
+<p>Questions about privacy, or a request about your information:</p>
+<p><strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong></p>
+<p>Trove is an independent app made by Mahmoud Ahmed.</p>
+<footer>
+  <p>Trove &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

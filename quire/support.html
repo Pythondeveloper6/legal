@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quire &mdash; Support</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Quire</a>
+<h1>Support</h1>
+<p>Contact: <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+<h2>FAQ</h2>
+<h3>What file types does Quire open?</h3>
+<p>Quire is a read-only viewer for a broad range of document formats,
+including:</p>
+<ul>
+<li>Word documents (<code>.doc</code>, <code>.docx</code>), OpenDocument Text (<code>.odt</code>), Rich Text
+  (<code>.rtf</code>, <code>.rtfd</code>)</li>
+<li>HTML and web archives</li>
+<li>PDF</li>
+<li>Plain text and Markdown</li>
+<li>eBooks (EPUB, FictionBook)</li>
+<li>CSV and other structured/tabular text</li>
+<li>Source code, JSON, plist, log files, diffs, and subtitles</li>
+<li>Archives (zip and similar) — browsed without fully extracting them</li>
+<li>Images, audio, and video</li>
+<li>Email (<code>.eml</code>)</li>
+</ul>
+<p>If a file's type isn't one Quire specifically recognizes, it falls back
+to a plain-text or generic preview where possible.</p>
+<h3>Why is remote content blocked?</h3>
+<p>Some HTML documents and web archives link to images, fonts, or other
+resources hosted online. Loading them tells whoever hosts that content
+your IP address and that you opened the document. Quire blocks all such
+network requests by default so opening a document never quietly reaches
+out to the internet. You can allow it for a single document from a
+banner on that document's tab, or turn it on globally in Settings →
+Privacy.</p>
+<h3>Why does a file show as "missing" in the sidebar?</h3>
+<p>Quire doesn't keep a copy of files you open — it keeps a security-scoped
+bookmark, the sandboxed macOS mechanism for reopening a file you
+previously granted access to without asking again. If that file is
+moved, renamed, deleted, or its volume is unmounted, the bookmark can no
+longer resolve, and Quire shows it as "Missing" in the sidebar rather
+than silently dropping it. Locate the file again and reopen it to
+restore access — the old entry can then be removed.</p>
+<h3>Does Quire ever modify my files?</h3>
+<p>No. Quire is read-only. It never writes to, moves, renames, or deletes
+the documents you open. The only things Quire writes are its own local
+data — recents, folders, settings, and search cache — described in the
+<a href="privacy-policy.md">Privacy Policy</a>.</p>
+<h3>Where is my data stored?</h3>
+<p>Locally, under <code>~/Library/Application Support/com.mahmoudahmed.quire/</code>
+and macOS <code>UserDefaults</code>. See the <a href="privacy-policy.md">Privacy Policy</a>
+for details.</p>
+<footer>
+  <p>Quire &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

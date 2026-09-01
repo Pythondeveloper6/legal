@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hop &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; hop</a>
+<h1>Hop — Privacy Policy</h1>
+<p><em>Last updated: 26 June 2026</em></p>
+<p>Hop shares one keyboard and mouse across the computers on your desk. This policy
+explains what the app does — and does not do — with your information.</p>
+<h2>The short version</h2>
+<ul>
+<li>Hop does <strong>not</strong> collect, transmit, sell, or share your personal data.</li>
+<li>Hop has <strong>no servers, no accounts, and no analytics</strong>. There is nothing to sign up for.</li>
+<li>Keyboard and mouse activity is relayed <strong>only</strong> to the peer computers you pair with,
+  <strong>directly over your local network</strong> — never to the developer or any third party.</li>
+</ul>
+<h2>How Hop works</h2>
+<p>Hop discovers other Hop computers on your <strong>local network</strong> using Bonjour, and lets
+you pair with them. Once paired, the computer acting as the controller relays keyboard
+and mouse events to the peer your pointer is currently on. This relay happens <strong>only</strong>
+between the machines you have explicitly paired, <strong>over your LAN</strong>, using the bundled
+<a href="https://github.com/input-leap/input-leap">Input Leap</a> engine. Traffic can be secured
+with TLS between peers.</p>
+<p>Hop never sends your keystrokes, mouse movement, clipboard, or any other input to the
+developer or to any remote service. There is no cloud component.</p>
+<h2>What Hop stores</h2>
+<p>Hop keeps a small amount of configuration <strong>on your device</strong> using the standard macOS
+preferences store: your chosen mode (controller or peer), screen-arrangement settings,
+and whether Hop launches at login. That's it. This never leaves your Mac.</p>
+<h2>System permissions Hop needs</h2>
+<p>To share input, macOS requires you to grant Hop two permissions in
+<strong>System Settings → Privacy &amp; Security</strong>:</p>
+<ul>
+<li><strong>Accessibility</strong> — so Hop can move the pointer and synthesize key presses on peers.</li>
+<li><strong>Input Monitoring</strong> — so Hop can read keyboard and mouse events to relay them.</li>
+<li><strong>Local Network</strong> — so Hop can discover and connect to peers on your LAN.</li>
+</ul>
+<p>These permissions are used solely to share input between the computers you pair. Hop
+does not log, store, or transmit what you type beyond the live relay to the active peer.</p>
+<h2>Your control</h2>
+<ul>
+<li>You can change or remove pairings at any time in Hop.</li>
+<li>You can revoke Accessibility, Input Monitoring, or Local Network access at any time in
+  System Settings.</li>
+<li>"Reset Hop" in Settings clears all of Hop's stored preferences.</li>
+<li>Deleting the app removes its local preferences from your device.</li>
+</ul>
+<h2>Children</h2>
+<p>Hop does not collect personal information from anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the "Last updated" date above will change accordingly.</p>
+<h2>Contact</h2>
+<p>Questions about privacy? Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<footer>
+  <p>hop &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

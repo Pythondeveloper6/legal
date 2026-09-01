@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lectern &mdash; Support</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; lectern</a>
+<h1>Lectern — Support</h1>
+<p>Need a hand with Lectern? We're happy to help.</p>
+<h2>Contact</h2>
+<p>Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong> and we'll get back to you.</p>
+<h2>Common questions</h2>
+<p><strong>Where does Lectern store my courses?</strong>
+In whatever folder you choose as your workspace (Settings → General → Workspace
+folder, default <code>~/Data/Content/Courses-content</code>). Every subfolder there containing
+Markdown files shows up as a course in the sidebar. Nothing is copied elsewhere —
+edit the files with any other editor and Lectern picks up the changes.</p>
+<p><strong>Which AI provider should I use?</strong>
+Settings → Provider lets you switch any time:
+- <strong>Claude (API)</strong> — needs an Anthropic API key from console.anthropic.com. Fastest
+  to set up, includes web search and tool use.
+- <strong>Claude (Code CLI)</strong> — reuses your existing <code>claude</code> login, no API key needed,
+  as long as the CLI is installed and on your PATH (or pointed at directly).
+- <strong>Ollama</strong> — fully local and free once you've pulled a model with
+  <code>ollama pull &lt;model&gt;</code>. Nothing leaves your machine. Requires Ollama running at
+  <code>http://localhost:11434</code> (or a custom URL you set).</p>
+<p>Use "Test connection" in Settings → Provider to confirm your setup before
+generating a course or asking a question.</p>
+<p><strong>Why did course generation or Ask-AI fail?</strong>
+Almost always a provider issue: a missing/invalid API key, the <code>claude</code> CLI not
+found at the expected path, or Ollama not running. Check Settings → Provider →
+Test connection first — the error message there is the same one the app hit.</p>
+<p><strong>What's a course profile, and can I write my own?</strong>
+A course profile (Settings → Main Prompt) is a Markdown style guide that tells
+Lectern how to structure a generated course — required sections, whether Mermaid
+diagrams or comparison tables are expected, file naming, and so on. Lectern ships
+with two: a numbered "deep dive" profile and an interview-style Q&amp;A profile. Drop
+your own <code>.md</code> profile into the user profiles folder to define a custom structure,
+and pick it when creating a course.</p>
+<p><strong>What are Extra Prompts?</strong>
+Reusable snippets of instruction (Settings → Extra Prompts) that get appended to
+either course generation, Ask-AI answers, or both — without editing your base course
+profile. Handy for house rules like "always include a runnable code example" that
+apply across every course.</p>
+<p><strong>Can I search my notes?</strong>
+Yes — the Notes panel searches every saved answer across all courses (backed by
+SQLite full-text search), and you can filter by course or click through to the
+source file.</p>
+<p><strong>Does Lectern work offline?</strong>
+Browsing, editing, and previewing your courses always works offline — that's just
+local files. AI features need whichever backend you've chosen to be reachable:
+Ollama needs to be running locally, Claude (API) and Claude (Code CLI) need
+internet access.</p>
+<h2>Privacy &amp; Terms</h2>
+<ul>
+<li><a href="privacy">Privacy Policy</a></li>
+<li><a href="terms">Terms of Use</a></li>
+</ul>
+<footer>
+  <p>lectern &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

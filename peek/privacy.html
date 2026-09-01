@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peek &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Peek</a>
+<h1>Peek — Privacy Policy</h1>
+<p><em>Last updated: 28 August 2026</em></p>
+<p>Peek is built for children, so it is built to collect nothing about them. This
+policy explains what the app does and does not do with information on your
+device.</p>
+<h2>The short version</h2>
+<ul>
+<li>Peek does <strong>not</strong> collect, transmit, sell, or share any data — about a child
+  or a parent.</li>
+<li>There are <strong>no accounts and no sign-in.</strong> The only thing anyone types into
+  Peek is a child's first name, and it never leaves the device.</li>
+<li>Child profiles, discovery progress, voice recordings, and app settings are
+  stored <strong>only on the device</strong>, inside the app's own local storage.</li>
+<li>The <strong>camera is used for augmented reality</strong> — to detect the floor so toys
+  can be placed on it. Camera frames are never recorded or sent anywhere. The
+  only picture Peek ever keeps is one a grown-up deliberately takes.</li>
+<li>The <strong>microphone is used only when a grown-up chooses to record their own
+  voice</strong> saying a word, and only after that grown-up has read a plain-language
+  explainer and agreed. Those clips stay on this device, can be exported or
+  deleted at any time, and consent can be withdrawn from Settings — which
+  deletes every recording with it.</li>
+<li><strong>Delete all data</strong> in the grown-ups' area erases every child, all progress
+  and badges, every voice recording, and every setting, returning Peek to a
+  freshly installed state.</li>
+<li>Peek can <strong>add</strong> a picture to your photo library. It can never read, list, or
+  see the photos already there.</li>
+<li><strong>No ads, no analytics, no third-party SDKs, and no trackers of any kind.</strong></li>
+<li>Spoken names and encouragement are generated <strong>on-device</strong> — nothing is sent
+  to a server to produce them.</li>
+</ul>
+<h2>How Peek works</h2>
+<ul>
+<li><strong>Camera / augmented reality</strong> — Peek uses ARKit and RealityKit to find the
+  floor in front of the device and place 3D toys on it. The live camera feed is
+  processed only to do this; it is never recorded, stored, uploaded, or used
+  for any other purpose. Before the camera is ever switched on, Peek asks in
+  its own words where you would like to play, and offers a cozy virtual toy
+  room beside the camera option — so nothing starts until someone chooses it.
+  If camera access is denied, if the device cannot do AR, if the camera is
+  interrupted mid-play, or if a grown-up has turned on "Always use the toy
+  room" in Settings, Peek plays in that toy room instead. Every toy, game, and
+  word is reachable there; nothing is behind the camera.</li>
+<li><strong>Child profiles</strong> — for each child who plays on this device, a grown-up
+  types a first name and picks an animal picture from a fixed set of emoji.
+  (A child can also be given their own language, so one sibling can learn in
+  Arabic while another learns in English, and an optional age band — "2–3",
+  "4–5" or "6+", with a Skip option — which only decides how many cards or
+  number buttons appear at once. Peek never asks for a birthdate.) This is
+  saved locally so each child keeps a separate collection. It is never transmitted and never leaves the
+  device.</li>
+<li><strong>Discovery progress &amp; collection</strong> — which toys a child has found, which
+  celebrations and badges they have already seen, and whether they found
+  today's word are saved locally using <code>UserDefaults</code>, one set per child
+  profile. This is what powers My Collection, badges, and the parent-facing
+  Learning Progress dashboard.</li>
+<li><strong>App settings</strong> — language (English/Arabic/device default), spoken-names
+  toggle, sound-effects toggle, vibration toggle, the play-time limit, and
+  onboarding state are saved locally using <code>UserDefaults</code>.</li>
+<li><strong>Spoken feedback</strong> — toy names and encouragement use Apple's on-device
+  <code>AVSpeechSynthesizer</code>. No audio or text is sent off the device to produce
+  this speech.</li>
+<li><strong>Your own voice (microphone)</strong> — behind the grown-ups' gate, a grown-up can
+  record themselves saying each word, so a child hears a familiar voice instead
+  of the synthesized one. The first time, that screen shows an explainer
+  describing what is recorded, where it is kept, and how to delete it, and
+  nothing happens until the grown-up agrees; declining is remembered, and the
+  screen is never reachable from a child's screen. After agreeing, Peek asks
+  iOS for microphone permission and records only while a grown-up is on that
+  screen and taps Record — never in the background, never during a child's
+  play, and never while listening for anything else. A take stops on its own
+  after five seconds, and a call or another app taking the microphone throws
+  the take away rather than saving a fragment. Each clip is written into Peek's
+  own private storage on this device (Application Support, which the Files app
+  cannot browse). Clips are never uploaded, never shared, and no other app can
+  read them. On the same screen you can play any clip back, delete one, export
+  copies of them all through the standard iOS share sheet, or delete all of
+  them; Settings → Turn off voice recording withdraws consent and deletes every
+  recording at once. Deleting Peek removes them all.</li>
+<li><strong>Pictures of the toy scene (photo library)</strong> — behind the grown-ups' gate, a
+  grown-up can photograph the toy scene to keep or share it. Peek asks iOS for
+  <strong>add-only</strong> photo access: that permission lets Peek put a new picture into
+  your library and nothing else — it cannot see, browse, or read any photo you
+  already have. The picture goes to your photo library, and anywhere you
+  choose to send it with the standard iOS share sheet. Nowhere else.</li>
+<li><strong>What Peek never touches</strong> — no location, no contacts, no health data, no
+  calendar, no address book. Peek never reads your photo library, and it never
+  turns on the camera or microphone by itself.</li>
+<li><strong>No network requests</strong> — Peek has no server and makes no network requests at
+  all; it works completely offline. The Privacy, Terms, Support, Contact, and
+  Rate links in the grown-ups' area hand off to Safari, Mail, or the App Store,
+  which is your device connecting, not Peek.</li>
+<li><strong>Word of the Day widget</strong> — the optional home-screen and lock-screen widgets
+  pick a word from Peek's built-in catalog using only the current date. So they
+  can also show the active child's first name, avatar emoji, and discovery
+  count, the app saves a small snapshot of just those details — plus the chosen
+  language and whether today's word has been found — into a shared App Group
+  container,
+  <code>group.com.mahmoudahmed.peek</code>, which the widgets read. That container is
+  local storage on your device — nothing in it is transmitted, and the widgets
+  make no network requests. Voice recordings and pictures are never put there.</li>
+</ul>
+<h2>The grown-ups' area</h2>
+<p>Settings, child-profile management, voice recording, the learning-progress
+dashboard, granting extra play time, and saving or sharing a picture all sit
+behind a parent gate (a simple multiplication question a young
+child can't yet solve). This is a soft barrier to keep those actions for
+grown-ups — it is not an account system, and nothing typed there is transmitted
+anywhere.</p>
+<h2>Your control</h2>
+<ul>
+<li>Reset a child's collection at any time from Settings → Reset collection.</li>
+<li>Rename, re-avatar, or delete a child profile from the grown-ups' area, which
+  also clears that child's saved collection.</li>
+<li>Delete any voice recording — or all of them, or export copies of them —
+  from the recording screen in the grown-ups' area.</li>
+<li>Withdraw microphone consent at any time from Settings → Turn off voice
+  recording, which deletes every recording along with it.</li>
+<li>Turn on Settings → Always use the toy room to keep Peek out of the camera
+  entirely, on every screen, without losing any content.</li>
+<li>Erase everything at once with Settings → Delete all data: every child,
+  all progress and badges, every recording, every setting, and the snapshot the
+  widget reads.</li>
+<li>Turn off Peek's access to the camera, microphone, or photo library at any
+  time in the iOS Settings app, under Privacy &amp; Security. Peek keeps working
+  without them — it falls back to the virtual toy room and the built-in voice.</li>
+<li>Deleting the app removes all of its local data from your device, including
+  every voice recording. Pictures you already saved stay in your photo library,
+  because they are yours.</li>
+</ul>
+<h2>Children</h2>
+<p>Peek is designed for children. It collects nothing from anyone, including
+children — nothing a child does in Peek is transmitted off the device.</p>
+<p>The one piece of personal information Peek holds is a child's first name,
+typed by a grown-up so the right child sees the right collection. It sits in
+local storage on this device, and in the App Group container the widget reads
+on the same device. There is no way to enter a birthdate, an email address, a
+phone number, an address, or a photo of a child anywhere in the app. A profile
+is only ever a first name, a chosen emoji, an optional language, and an
+optional age band ("2–3", "4–5", "6+", or nothing at all) that adjusts how much
+appears on screen at once.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the "Last updated" date above will change accordingly.</p>
+<h2>Contact</h2>
+<p>Questions about privacy? Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<footer>
+  <p>Peek &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spark &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Spark</a>
+<h1>Spark — Privacy Policy</h1>
+<p><em>Last updated: 31 August 2026</em></p>
+<p>Spark is a science lab for kids, and it's built to be trustworthy for parents
+by never leaving the device. This policy explains exactly what the app does
+and does not do with information.</p>
+<h2>The short version</h2>
+<ul>
+<li>Spark does <strong>not</strong> collect, transmit, sell, or share any personal data, from
+  children or adults.</li>
+<li>Spark makes <strong>no network requests of its own</strong>. It works fully offline and
+  always has. The only network traffic Spark can cause is Apple's own — the
+  App Store handling a purchase, or Apple handling a Sign in with Apple
+  request. Neither sends anything to us.</li>
+<li>No analytics, no advertising, no third-party SDKs, and no trackers of any
+  kind are included in the app.</li>
+<li>Everything Spark remembers lives only in local storage on your device — in
+  Apple's standard <code>UserDefaults</code> mechanism, and (for the optional sign-in)
+  the device Keychain — and never leaves it.</li>
+<li>There is <strong>no Spark server</strong>. There is nothing for us to store, because there
+  is nowhere for us to store it.</li>
+</ul>
+<h2>What Spark stores, and where</h2>
+<p>Spark saves a handful of small values on-device so the app remembers your
+child's setup between visits:</p>
+<ul>
+<li>Which of the 94 experiments have been completed (drives the gold stars in
+  the Collection screen)</li>
+<li>The chosen language (English or Arabic)</li>
+<li>The chosen appearance (light, dark, or system)</li>
+<li>Whether sound and haptic feedback are turned on</li>
+<li>Whether onboarding has been completed</li>
+<li>Whether the Full Lab has been unlocked — a simple yes/no flag</li>
+</ul>
+<p>All of this is stored using <code>UserDefaults</code>, Apple's standard on-device
+settings storage, scoped to Spark's own app sandbox. None of it is a name,
+email, photo, or any other personally identifiable information — it's simply
+which cards on the home screen your child has already tried.</p>
+<p>If you use the optional Sign in with Apple, the identifier Apple gives the app
+(and a display name, if you choose to share one) is stored in the <strong>device
+Keychain</strong>, which is the encrypted store iOS provides for exactly this. It is
+never transmitted anywhere by Spark. See "Optional Sign in with Apple" below.</p>
+<h2>Purchases</h2>
+<p>Spark offers an optional Full Lab unlock, sold either as a yearly subscription
+or as a one-time lifetime purchase. <strong>Every purchase is processed entirely by
+Apple through the App Store.</strong></p>
+<ul>
+<li>The developer never sees, receives, or stores your name, address, card
+  number, or any other payment or billing information. None of it passes
+  through Spark.</li>
+<li>What Spark keeps locally is a single on-device flag recording whether the
+  Full Lab is unlocked. It is not a receipt, not an account, and not linked to
+  you.</li>
+<li>Apple's own handling of the transaction is covered by
+  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+<li>Refunds are handled by Apple, not by us.</li>
+</ul>
+<p>Every screen that can start a purchase or a restore sits behind a parental
+gate — a multiplication question intended for an adult — so a child cannot
+reach it alone.</p>
+<h2>Optional Sign in with Apple</h2>
+<p>Spark works completely without an account, and nothing in the app requires
+one. Sign in with Apple is offered in Settings, behind the parental gate, as
+an option only. It is never required to play, to purchase, or to restore a
+purchase.</p>
+<p>If you choose to use it:</p>
+<ul>
+<li><strong>What is stored:</strong> the opaque user identifier Apple returns, and a display
+  name if you choose to share one. Spark asks for nothing else — no email
+  address is requested.</li>
+<li><strong>Where it is stored:</strong> the device's Keychain, on that device only.</li>
+<li><strong>Where it is sent:</strong> nowhere. Spark has no server, makes no network
+  requests, and never transmits the identifier or the name to us or to anyone
+  else. Apple, of course, knows that you signed in — that is Apple's own
+  record, governed by Apple's privacy policy, not ours.</li>
+<li><strong>How long it is kept:</strong> until you delete it, or until you delete the app.</li>
+</ul>
+<h3>Deleting your Spark sign-in</h3>
+<p>There is a <strong>Delete Account</strong> control inside the app: Settings → pass the
+parental gate → Delete Account. It asks you to confirm, because it cannot be
+undone.</p>
+<p><strong>What deleting does:</strong> it permanently erases the Sign in with Apple
+identifier and any stored name from the device Keychain. Spark then knows
+nothing about you at all, and the app returns to exactly the signed-out state
+it was in before.</p>
+<p><strong>What deleting does not do, and what you should do about it:</strong></p>
+<ul>
+<li><strong>Apple keeps its own record</strong> that you used Sign in with Apple with Spark.
+  Because Spark has no server, it cannot call Apple's token-revocation API to
+  clear that record — that call requires a server-signed secret, and a
+  serverless app has nowhere to sign it. To remove Apple's record as well, go
+  to <strong>Settings → your name → Sign in with Apple → Spark → Stop Using Apple
+  Account</strong> on your device. The app tells you this at the moment you delete,
+  so it isn't something you have to remember from this page.</li>
+<li><strong>It does not cancel a subscription.</strong> Billing continues through Apple until
+  you cancel it in Settings → your name → Subscriptions. If you are
+  subscribed and intend to stop paying, cancel <em>before</em> deleting.</li>
+<li><strong>It does not erase your child's progress</strong>, language, appearance, or sound
+  settings. Those were never tied to the sign-in — they are local app data
+  that exists whether you sign in or not. To remove those as well, delete the
+  app (see "Your control" below).</li>
+</ul>
+<h3>Requesting deletion another way</h3>
+<p>Because nothing ever leaves your device, there is no copy of your data for us
+to hold, export, or erase, and no request you need to send us. Deletion is
+entirely in your hands, through the in-app control above and by deleting the
+app. If you have a question about any of this, email
+<strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong> and we'll answer it.</p>
+<h2>Sensors and on-device services</h2>
+<p>A few experiments use device hardware, entirely locally:</p>
+<ul>
+<li><strong>Device tilt (Core Motion)</strong> — the rain experiment reads the device's live
+  tilt so raindrops can slant realistically. This reading is used only to
+  drive that moment's animation; it is never stored, logged, or sent
+  anywhere.</li>
+<li><strong>Spoken narration (AVSpeechSynthesizer)</strong> — Spark can speak an
+  experiment's name aloud using the system's built-in, on-device voices. This
+  is text-to-speech only; no audio is recorded, no microphone is used, and
+  nothing is uploaded. Narration is <strong>English only</strong>; in Arabic the app is
+  silent, and because every scene is nonverbal by design, nothing is lost.</li>
+<li><strong>Haptic feedback (Core Haptics)</strong> and <strong>sound effects</strong> are synthesized on
+  the device in real time; no audio files ship in the app and none are
+  transmitted.</li>
+</ul>
+<h2>No cloud, no tracking</h2>
+<p>Spark does not sync to iCloud, does not use HealthKit, and does not request
+your location, camera, photo library, or contacts. It contains no advertising
+framework, never presents an App Tracking Transparency prompt (because it does
+not track), and includes no third-party SDK of any kind. There are no outbound
+links a child could tap into, no web views, no chat, and no user-generated
+content.</p>
+<p>The app ships a privacy manifest (<code>PrivacyInfo.xcprivacy</code>) declaring exactly
+this: no tracking, no tracking domains, no collected data types, and a single
+required-reason declaration for reading and writing its own <code>UserDefaults</code>.</p>
+<h2>Children's privacy</h2>
+<p>Spark is designed for children roughly ages 4–9 and is built accordingly. It
+collects no personal information from anyone, of any age, and complies with
+the Children's Online Privacy Protection Act (COPPA) and Apple's Kids Category
+requirements by the simplest possible route: there is no data collection to
+consent to, no advertising, no analytics, no third-party SDKs, no external
+links, no chat, and no user-generated content.</p>
+<p>Purchases and the optional sign-in are the only adult-facing actions in the
+app, and both are behind a parental gate. Nothing a child can reach on their
+own spends money, shares information, or leaves the app.</p>
+<h2>Your control</h2>
+<p>Because nothing leaves the device, there is nothing to request, export, or
+delete from us. To remove the optional sign-in, use Delete Account in Settings
+(above). To clear everything else Spark remembers, delete the app from your
+device — its local storage, including completed-experiment stars, is removed
+with it.</p>
+<p>One iOS detail worth knowing: Keychain items can survive deleting an app, so a
+stored sign-in may still be on the device after a reinstall. Spark handles this
+for you — on launch it asks Apple whether the stored identifier is still
+authorized, and forgets it if it is not. If you want it gone for certain,
+use Delete Account before deleting the app.</p>
+<p>A previously purchased Full Lab is not lost by deleting the app: it lives with
+your Apple Account and comes back with <strong>Restore Purchases</strong>.</p>
+<h2>Changes to this policy</h2>
+<p>If this policy ever changes, the "Last updated" date above will change
+accordingly.</p>
+<h2>Contact</h2>
+<p>Questions about privacy? Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<footer>
+  <p>Spark &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

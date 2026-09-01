@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CourseCanvas &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; CourseCanvas</a>
+<h1>CourseCanvas — Privacy Policy</h1>
+<p><em>Last updated: 12 July 2026</em></p>
+<p>CourseCanvas is built to stay out of your way and out of your data. This policy
+explains what the app does and does not do with your information.</p>
+<h2>The short version</h2>
+<ul>
+<li>CourseCanvas does <strong>not</strong> collect, transmit, sell, or share any of your data.</li>
+<li>Your lessons live in a single <code>.cvs</code> file <strong>on your own disk</strong>, opened and saved
+  through the standard macOS Open/Save panels.</li>
+<li>There are <strong>no analytics, no advertising, no accounts, and no third‑party trackers</strong>.</li>
+<li>The app makes <strong>no outbound network connections</strong> of its own.</li>
+</ul>
+<h2>How CourseCanvas works</h2>
+<p>CourseCanvas is an infinite‑canvas whiteboard for live teaching. Everything you draw,
+type, or paste — shapes, text, sticky notes, code blocks, and slide frames — is held
+in memory by the editor and written to a <code>.cvs</code> file (a JSON document containing a
+snapshot of the canvas) only when you save, either manually (⌘S) or through the
+built‑in autosave, which writes to disk about 1.5 seconds after you stop making
+changes to a document that already has a location on disk.</p>
+<p>Opening a file, saving a file, and exporting to PNG, SVG, or PDF all go through
+native macOS file dialogs (<code>NSOpenPanel</code> / <code>NSSavePanel</code>) triggered by your explicit
+action. CourseCanvas only ever reads or writes the specific file path you chose. It
+keeps no separate copy anywhere else and does not scan your disk for other files.</p>
+<p>CourseCanvas opens no internet connection. It does not phone home, check for updates
+over the network, or send telemetry of any kind.</p>
+<h2>What CourseCanvas stores</h2>
+<ul>
+<li><strong>Your document</strong> — the <code>.cvs</code> file you choose to save, at the location you choose.</li>
+<li><strong>Recent documents</strong> — macOS's own "Open Recent" list (<code>app.addRecentDocument</code>),
+  stored by the operating system, not by CourseCanvas.</li>
+<li><strong>UI preferences</strong> — your last‑used theme and canvas background are saved inside
+  each document's own metadata, not in a separate account or cloud profile.</li>
+</ul>
+<p>CourseCanvas stores no personal information, no usage logs, and nothing outside the
+files you explicitly save.</p>
+<h2>Apple services</h2>
+<p>CourseCanvas uses no Apple online services — no iCloud sync, no analytics, no
+StoreKit. The app bundles no non‑Apple SDKs.</p>
+<h2>Your control</h2>
+<ul>
+<li>Quitting the app stops all activity immediately.</li>
+<li>Deleting a <code>.cvs</code> file deletes that lesson; nothing else references it.</li>
+<li>Removing the app removes it entirely. Nothing is installed system‑wide.</li>
+</ul>
+<h2>Children</h2>
+<p>CourseCanvas collects no personal information from anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the "Last updated" date above will change accordingly.</p>
+<h2>Contact</h2>
+<p>Questions about privacy? Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<footer>
+  <p>CourseCanvas &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>

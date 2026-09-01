@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lectern &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; lectern</a>
+<h1>Lectern — Privacy Policy</h1>
+<p><em>Last updated: 12 July 2026</em></p>
+<p>Lectern is a desktop app for building and studying Markdown courses. This policy
+explains, precisely, what happens to your data — including what leaves your device
+when you turn on an AI feature.</p>
+<h2>The short version</h2>
+<ul>
+<li>Lectern's developer collects <strong>nothing</strong>. There is no Lectern server, no account,
+  no analytics, and no crash reporting anywhere in the app.</li>
+<li>Your course files live as plain Markdown on your disk, in whatever folder you
+  choose. Notes, extra prompts, and settings live in a local app-data folder.</li>
+<li>AI features send data to whichever provider you pick, using your own credentials:</li>
+<li><strong>Ollama</strong> — 100% local. Nothing leaves your machine.</li>
+<li><strong>Claude (API)</strong> — the current lesson's text and your question are sent
+    directly to Anthropic's API using the API key you provide.</li>
+<li><strong>Claude (Code CLI)</strong> — Lectern runs your locally-installed <code>claude</code> CLI as a
+    subprocess and streams its output back; any network activity is the CLI's own,
+    under your existing Claude Code login.</li>
+<li>No advertising, no third-party trackers, no data resale — there's no mechanism in
+  the app to do any of that.</li>
+</ul>
+<h2>How Lectern works</h2>
+<p><strong>Your workspace folder.</strong> In Settings → General you point Lectern at a folder
+(default <code>~/Data/Content/Courses-content</code>). Lectern reads that folder directly with
+Node's filesystem APIs to list courses and files, and writes <code>.md</code> files back when
+you save. This never touches the network.</p>
+<p><strong>Local app data.</strong> Lectern keeps a few things in its private app-data directory
+(<code>~/Library/Application Support/Lectern</code> on macOS), never transmitted anywhere:
+- <code>settings.json</code> — your workspace folder, active AI provider, theme, and other
+  preferences (via <code>electron-store</code>).
+- <code>secrets.json</code> — your Anthropic API key, Ollama base URL, CLI path, and optional
+  web-search keys (Tavily/Brave), stored with <code>electron-store</code>'s built-in
+  obfuscation. This is <strong>not</strong> strong encryption — it deters casual inspection of
+  the file, not a determined attacker with access to your Mac. Keep your device
+  secure the way you would for any locally-stored credential.
+- <code>lectern.db</code> — a local SQLite database holding your Notes (with full-text search),
+  saved Extra Prompts, quiz state, and Pomodoro session history. All of it is
+  written from data you already have (your course files, your questions, your
+  answers) — nothing is fetched from or synced to a remote service.</p>
+<p><strong>AI providers, and what each one sees.</strong> Lectern supports three interchangeable
+backends, chosen in Settings → Provider:
+- <strong>Ollama</strong> — talks only to a local Ollama server (default
+  <code>http://localhost:11434</code>). No internet connection is made.
+- <strong>Claude (API)</strong> — when you ask a question or generate a course, the relevant
+  lesson content, your prompt, and (for generation) your course profile are sent to
+  Anthropic's API over HTTPS, authenticated with the API key you entered. This is
+  the same connection you'd get using the Anthropic SDK directly; Anthropic's own
+  privacy policy governs that data once it leaves your device.
+- <strong>Claude (Code CLI)</strong> — Lectern spawns the <code>claude</code> binary already on your system
+  (<code>ClaudeCLIProvider</code>) and streams its JSON output. Whatever that CLI sends is
+  under your existing Claude Code account, outside Lectern's control or visibility.</p>
+<p><strong>Optional web search.</strong> If you add a Tavily or Brave Search API key in Settings,
+and the active provider doesn't already have built-in search, Lectern sends your
+search query to that provider's API. This is off unless you supply a key.</p>
+<p><strong>Course profiles and templates.</strong> The Markdown style guides that shape generated
+courses (<code>resources/profiles/agents.md</code>, <code>interview.md</code>, plus any you add) are read
+from local files — no network involved.</p>
+<h2>Your control</h2>
+<ul>
+<li>Switch providers, clear your API keys, or point Lectern at a different workspace
+  folder at any time from Settings.</li>
+<li>Delete a Note from the Notes panel, or delete a file directly from disk — Lectern
+  has no separate copy of your course content beyond what you can see in your
+  workspace folder.</li>
+<li>Turn on "Sync notes to disk" in Settings → General to mirror your local notes
+  database into a <code>_notes/</code> folder inside each course, if you want them versioned
+  alongside your Markdown in git.</li>
+<li>Uninstalling Lectern and deleting its Application Support folder removes all
+  local app data. Your course Markdown files are untouched, since they live in the
+  workspace folder you chose.</li>
+</ul>
+<h2>Children</h2>
+<p>Lectern is a general-purpose study tool and collects no personal information from
+anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the "Last updated" date above will change accordingly.</p>
+<h2>Contact</h2>
+<p>Questions about privacy? Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<footer>
+  <p>lectern &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>
