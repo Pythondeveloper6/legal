@@ -20,6 +20,9 @@ the app does and does not do with your information.</p>
 <li>Your <strong>Apple Health data</strong> is read and processed <strong>entirely on your device</strong>. It
   never leaves your iPhone and is never sent to the developer.</li>
 <li>There are <strong>no analytics, no advertising, and no third-party trackers</strong>.</li>
+<li>Signing in with <strong>Sign in with Apple</strong> is optional. If you use it, the identifier
+  and (on first sign-in only) name and email Apple provides are stored only in your
+  device's Keychain and are never sent to the developer.</li>
 </ul>
 <h2>Apple Health (HealthKit)</h2>
 <p>Throughline reads health metrics — sleep, heart rate, HRV, activity, workouts,
@@ -40,10 +43,34 @@ goals, earned badges, saved recaps, and your settings — is stored <strong>loca
 device</strong> using Apple's on-device database. You can erase all of it at any time in
 <strong>Settings → About → "Delete all app data."</strong> Deleting the app also removes this
 local data.</p>
-<p>Throughline has <strong>no accounts and no sign-in</strong> of any kind. There is nothing to
-create, nothing to log into, and no identity for the app to store or send anywhere.
-The app has no developer-operated account server, analytics service, or advertising
-SDK.</p>
+<p>Throughline has no developer-operated account server, analytics service, or
+advertising SDK.</p>
+<h2>Sign in with Apple</h2>
+<p>Sign in with Apple is the <strong>only</strong> way to sign in to Throughline — there are no
+email/password accounts. Signing in is <strong>entirely optional</strong>; every feature of the
+app works fully whether or not you sign in.</p>
+<p>If you choose to sign in, Apple provides Throughline with a stable user
+identifier and, on your <strong>first sign-in only</strong>, the name and either your real
+email address or an Apple private-relay address associated with your Apple ID.
+Throughline stores these values in the device's <strong>Keychain</strong>, Apple's encrypted
+on-device secure storage. They are <strong>never transmitted to the developer or to any
+server</strong> — Throughline has no server to send them to.</p>
+<p>These three data types — <strong>User ID, Name, and Email Address</strong> — are the only
+personal data collected, as declared in Throughline's App Store privacy details.
+Each is linked to you and stored only on your device; none is used for tracking
+or for advertising. They exist solely so the app can recognize that you're signed
+in (App Functionality).</p>
+<p>To remove this data:</p>
+<ul>
+<li>In the app, go to <strong>You → Account → Delete account</strong>. This clears your stored
+  Apple credential from the Keychain and erases all on-device app data.</li>
+<li><strong>Settings → About → "Delete all app data"</strong> also erases everything, sign-in
+  included.</li>
+<li>To also revoke Throughline's access to your Apple ID itself, go to your
+  iPhone's <strong>Settings → [your name] → Sign-In &amp; Security → Sign in with
+  Apple</strong>, and remove Throughline from the list. That step is Apple's to
+  perform and is separate from deleting your data in the app.</li>
+</ul>
 <h2>Other device permissions</h2>
 <ul>
 <li><strong>Calendar</strong> — read-only, to gauge your meeting load for a more accurate daily
