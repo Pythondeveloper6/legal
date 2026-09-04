@@ -44,10 +44,9 @@ couple of minutes, not by a lawyer.</p>
   (English/Arabic), whether haptics are on, and a parent override that
   unlocks everything.</li>
 <li>All of the above is saved together as one local file (<code>progress.json</code>)
-  in an App Group container that Vroom shares only with its own Home
-  Screen widget — both are made by the same developer, both run only on
-  your device, and nothing in that container is ever transmitted anywhere.
-  The only separate value is the haptics on/off switch, kept in the app's
+  inside Vroom's own private app container on your device, and nothing in
+  that container is ever transmitted anywhere. The only separate value is
+  the haptics on/off switch, kept in the app's
   private <code>UserDefaults</code>. None of it is uploaded, backed up to a server of
   ours, or shared with anyone. It travels only inside your own Apple
   device backup, if you use one.</li>
@@ -70,11 +69,11 @@ couple of minutes, not by a lawyer.</p>
   store of any kind inside the app.</li>
 </ul>
 <h2>Home Screen widget</h2>
-<p>Vroom's widget shows today's daily challenge and your best result on it so
-far. It reads that information from the same on-device <code>progress.json</code> the
-app writes — through the App Group container described above — and never
-makes a network request of its own. The widget shows nothing about your
-child beyond a number your family already earned on this device.</p>
+<p>Vroom's widget shows today's daily challenge — the track and goal of the
+day. That challenge is worked out from the date alone, so the widget reads
+<strong>no saved progress at all</strong>: it holds no stars, no scores, no builds and
+no settings, and it never makes a network request. Nothing about your child
+appears on the Home Screen.</p>
 <h2>Children's privacy</h2>
 <p>Vroom is designed to be used directly by children, is submitted to the App
 Store <strong>Kids Category</strong>, and carries a <strong>4+</strong> age rating.</p>
@@ -121,8 +120,7 @@ anywhere.</p>
 <li><strong>Settings → Delete all data</strong> (behind the parent gate) — removes every
   saved build, every star, every unlocked part and paint, and resets all
   settings on this device. This cannot be undone.</li>
-<li>Deleting the app removes all of its local data, including the widget's
-  copy, from your device.</li>
+<li>Deleting the app removes all of its local data from your device.</li>
 </ul>
 <h2>App Store privacy label</h2>
 <p>Vroom is declared on the App Store as <strong>Data Not Collected</strong>: no data used
