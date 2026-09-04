@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Money Market &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Money Market</a>
+<h1>Money Market — Privacy Policy</h1>
+<p><em>Effective 4 September 2026</em></p>
+<p>Money Market is a market stall for children, and it is built to be
+trustworthy for parents by never leaving the device. This policy explains
+exactly what the app does and does not do with information.</p>
+<h2>The short version</h2>
+<ul>
+<li>Money Market does <strong>not</strong> collect, transmit, sell, or share any personal
+  data, from children or adults.</li>
+<li>Money Market makes <strong>no network requests at all</strong>. There is no networking
+  code in the app or in its widget. It works fully offline and always has.</li>
+<li>No analytics, no advertising, no third-party SDKs, and no trackers of any
+  kind are included in the app.</li>
+<li>There is <strong>no account and no sign-in</strong>. Nothing to register, nothing to log
+  in to, nothing to forget.</li>
+<li>Everything Money Market remembers — every child profile, every star, the
+  money book, the wallet, and every setting — lives only in local storage on
+  your device, in Apple's standard <code>UserDefaults</code> mechanism, and never leaves
+  it.</li>
+<li>There is <strong>no Money Market server</strong>. There is nothing for us to store,
+  because there is nowhere for us to store it.</li>
+<li>The app is free, contains <strong>no purchases of any kind</strong>, and has no payment
+  code in it.</li>
+</ul>
+<h2>What Money Market stores, and where</h2>
+<p>Money Market saves a handful of small values on-device so the app remembers
+your child's setup between visits:</p>
+<ul>
+<li><strong>Child profiles</strong> — for each child, a name you typed and one emoji chosen
+  from a fixed list of ten animals, plus an internal identifier the app
+  generates for itself.</li>
+<li><strong>Which child is playing</strong> right now.</li>
+<li><strong>Progress, per child</strong> — how many stars have been earned in each mode and
+  tier (Count the Table, Pay a Stall, Make Change), how many rounds have been
+  played, how many were finished with no mistakes, and which coins and notes
+  the child has met in the Money Book.</li>
+<li><strong>Settings</strong> — the chosen language (English or Arabic), the chosen currency
+  (Egyptian pound or US dollar), the appearance (light, dark, or system),
+  whether narration, sound effects and haptics are on, how fast the narrator
+  speaks, whether the "unlock all levels" parent override is on, and whether
+  onboarding has been completed.</li>
+</ul>
+<p>All of this is stored using <code>UserDefaults</code>, Apple's standard on-device
+settings storage, scoped to Money Market's own app sandbox. It is not a
+document, a photo, an email address, a birthday, a location, or anything else
+that could identify a person. <strong>A child's name and avatar are typed by a
+grown-up, kept on that one device, and never transmitted anywhere.</strong> You are
+free to type a nickname, a first initial, or nothing meaningful at all — the
+app does not care what the name is, and nobody but the person holding the
+device will ever see it.</p>
+<p>Progress keys are namespaced by the child's internal identifier, which is why
+switching children switches the stars: it is a bookkeeping detail on your
+device, not an identity we hold.</p>
+<h2>The coin-of-the-day widget</h2>
+<p>Money Market includes a small Home Screen widget that draws one coin or note a
+day and, when tapped, opens the wallet inside the app.</p>
+<p>A widget is a separate extension and cannot read the app's settings directly,
+so the app mirrors exactly <strong>two</strong> values into a shared App Group container on
+the same device: the chosen currency and the chosen language. That is all the
+widget needs in order to draw the right money in the right words. No child
+name, no progress, and no other setting is shared with it, and nothing in the
+widget is sent anywhere — it has no networking code either. Which coin is
+shown is worked out from the calendar date by arithmetic on the device, not
+fetched.</p>
+<h2>Sound and narration</h2>
+<ul>
+<li><strong>Spoken narration</strong> uses <code>AVSpeechSynthesizer</code>, Apple's built-in
+  text-to-speech, to say the name and value of a coin or note out loud in
+  English or Arabic. This is speech <em>out</em> only: <strong>no microphone is used, no
+  audio is recorded, and nothing is uploaded.</strong> If a voice for the chosen
+  language is not installed on the device, the app falls back to English
+  rather than going silent.</li>
+<li><strong>Sound effects</strong> are short audio files bundled inside the app — a coin
+  clink, a till ding, a soft "nope". They are played from the app itself.</li>
+<li><strong>Haptics</strong> are generated by the device.</li>
+</ul>
+<p>All three can be turned off independently in Settings.</p>
+<h2>The parent gate</h2>
+<p>A short multiplication question stands between a child and everything meant
+for a grown-up. Behind it, and only behind it, are:</p>
+<ul>
+<li>Settings</li>
+<li>The parent progress report</li>
+<li>Managing children — renaming, changing an avatar, or deleting a child</li>
+<li>"Delete all data"</li>
+<li>The "unlock all levels" override</li>
+<li><strong>Every link that leaves the app</strong> — this privacy policy, the terms, the
+  support page, the contact email, and the App Store review link</li>
+</ul>
+<p>A wrong answer produces a fresh question, so the same sum cannot be guessed
+repeatedly. This is required for apps in the Kids Category, and it is why a
+child cannot wander out of the app or wipe a sibling's stars on their own.</p>
+<p>The app also registers a <code>moneymarket://</code> link so the widget can open the
+wallet. The router accepts only the calm, child-facing screens — home, the
+wallet, the Money Book, and a round of play. No link, pasted or otherwise, can
+land on Settings, the report, or any destructive action.</p>
+<h2>The parent report</h2>
+<p>Settings contains a progress report for grown-ups: stars earned, rounds
+played, the share of rounds finished with no mistakes, which levels are open,
+and how much of the money book is filled in. <strong>Every number in it is worked
+out on the device from that child's own saved progress.</strong> Nothing is sent
+anywhere, nothing is compared with other children, and the report is
+deliberately kept on the grown-up side of the gate — it is written <em>about</em> a
+child, never shown <em>to</em> them.</p>
+<h2>What Money Market does not do</h2>
+<p>Money Market does not sync to iCloud, does not use HealthKit, and does not
+request your location, camera, photo library, microphone, contacts, or
+notifications. It contains no advertising framework, never presents an App
+Tracking Transparency prompt (because it does not track), and includes no
+third-party SDK of any kind. There is no chat, no social feature, no sharing,
+no leaderboard, no user account, and no user-generated content that goes
+anywhere — the only things a child creates are stars, and they stay on the
+device.</p>
+<p>Both the app and its widget ship a privacy manifest
+(<code>PrivacyInfo.xcprivacy</code>) declaring exactly this: no tracking, no tracking
+domains, no collected data types, and a single required-reason declaration for
+reading and writing their own <code>UserDefaults</code>.</p>
+<h2>Children's privacy</h2>
+<p>Money Market is designed for children roughly ages 4–8 and is built
+accordingly. It collects no personal information from anyone, of any age, and
+complies with the Children's Online Privacy Protection Act (COPPA) and Apple's
+Kids Category requirements by the simplest possible route:</p>
+<ul>
+<li><strong>Nothing is collected</strong>, so there is no parental consent to obtain for
+  collection and nothing to disclose to a third party.</li>
+<li><strong>There is no advertising</strong> — no ad network, no interest-based ads, no
+  third-party ad SDK, and no in-app promotion of anything.</li>
+<li><strong>There is no third-party data sharing</strong>, because there is no third party in
+  the app and no data leaving the device to share.</li>
+<li><strong>There are no purchases</strong> of any kind — no in-app purchases, no
+  subscriptions, no payment code.</li>
+<li><strong>Every external link and every parent control sits behind the parent
+  gate</strong>, so a child cannot leave the app or reach a grown-up screen alone.</li>
+<li><strong>A child's name and avatar never leave the device</strong>, and are visible only
+  to whoever is holding it.</li>
+</ul>
+<p>If you believe a child has somehow provided personal information through this
+app, please write to us at <strong>apps.mahmoudahmed@gmail.com</strong> — though by
+design there is nowhere in the app for that to happen, we will investigate any
+report immediately.</p>
+<h2>Your control</h2>
+<p>Because nothing leaves the device, there is nothing to request, export, or
+delete from us, and no request you need to send.</p>
+<ul>
+<li><strong>Delete one child</strong> — Settings → parent gate → Manage children. Removes
+  that child and all of their progress.</li>
+<li><strong>Delete everything</strong> — Settings → parent gate → Delete all data. Removes
+  every child, every star, the money book, and returns the app to its
+  first-run state.</li>
+<li><strong>Delete the app</strong> — removes all of its local storage with it, including the
+  values shared with the widget.</li>
+</ul>
+<h2>Changes to this policy</h2>
+<p>If this policy ever changes, the "Effective" date above will change
+accordingly.</p>
+<h2>Contact</h2>
+<p>Questions about privacy? Email <strong>apps.mahmoudahmed@gmail.com</strong>.</p>
+<hr />
+<p><a href="./terms.html">Terms of Use</a> · <a href="./support.html">Support</a></p>
+<footer><p>Money Market &middot; Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p></footer>
+</div>
+</body>
+</html>
