@@ -10,25 +10,98 @@
 <div class="wrap">
 <a class="back" href="./">&larr; WidgetCanvas</a>
 <h1>WidgetCanvas — Privacy Policy</h1>
-<p><em>Last updated: 25 June 2026</em></p>
+<p><em>Last updated: 4 September 2026</em></p>
 <p>WidgetCanvas is built so your data stays yours. This policy explains what the app
 does and does not do with your information.</p>
 <h2>The short version</h2>
 <ul>
 <li>WidgetCanvas does <strong>not</strong> collect, transmit, sell, or share your personal data.</li>
+<li>There is <strong>no WidgetCanvas server</strong>. There is nothing for the developer to store,
+  because there is nowhere for the developer to store it.</li>
 <li>The widgets you build and the data they show — habits, water logs, to-dos, photos,
   focus sessions, cycle dates, themes, and preferences — are stored <strong>on your device</strong>
-  and, where you have iCloud enabled, small preferences sync through <strong>your own private
-  iCloud account</strong>. The developer has no access to them.</li>
+  and, where you have iCloud enabled, a few small preferences sync through <strong>your own
+  private iCloud account</strong>. The developer has no access to them.</li>
+<li>An account is <strong>optional</strong>. Every widget works without signing in.</li>
 <li>There are <strong>no analytics, no advertising, and no third-party trackers</strong>.</li>
 </ul>
 <h2>What WidgetCanvas stores</h2>
 <p>Everything you create in WidgetCanvas (widget configurations, habits, water entries,
 to-do lists, focus sessions, cycle data, photos you pick, and theme/accent preferences)
-is saved locally using Apple's on-device database. A small set of preferences (theme,
-appearance, accent, and Pro status) sync through Apple's <strong>iCloud key-value store</strong> to
-your private iCloud account so your look-and-feel follows you across devices. This data
-is controlled by you and your Apple ID; the developer cannot see or retrieve it.</p>
+is saved locally using Apple's on-device database. A small set of preferences — the
+selected theme, the light/dark appearance, the app accent colour, and whether Pro is
+unlocked — sync through Apple's <strong>iCloud key-value store</strong> to your private iCloud
+account so your look-and-feel follows you across devices. This data is controlled by you
+and your Apple Account; the developer cannot see or retrieve it.</p>
+<h2>Optional accounts and Sign in with Apple</h2>
+<p>WidgetCanvas works completely without an account. Building widgets, placing them,
+buying Pro, and restoring a purchase never require one — signing in is an option in
+Settings → Account, and nothing is hidden behind it.</p>
+<p>If you choose to sign in, here is exactly what happens.</p>
+<h3>Sign in with Apple</h3>
+<ul>
+<li><strong>What Apple returns to the app:</strong> a stable, opaque user identifier for your Apple
+  Account, plus a name and an email address <strong>only if you choose to share them</strong>. Apple
+  sends the name and email once — on the very first authorization — and never again.</li>
+<li><strong>Hide My Email:</strong> if you choose Apple's private relay, the app receives a
+  <code>@privaterelay.appleid.com</code> forwarding address rather than your real one, and labels
+  it as a relay address in the Account screen. That is fully supported; the app never
+  needs your real address, and it never sends mail to either one.</li>
+<li><strong>Where it is stored:</strong> the identifier and any name or email are written to your
+  account record in the app's on-device database, and mirrored into the <strong>device
+  Keychain</strong> — the encrypted store iOS provides for exactly this — so the one-time
+  values survive a reinstall.</li>
+<li><strong>Where it is sent:</strong> nowhere. WidgetCanvas has no server and never transmits your
+  identifier, name, or email to the developer or to anyone else. Apple, of course, knows
+  that you signed in; that is Apple's own record, governed by
+  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, not this one.</li>
+<li><strong>Revocation:</strong> if you stop using your Apple Account with WidgetCanvas from iOS
+  Settings, the app notices at its next launch and returns itself to the signed-out
+  state.</li>
+</ul>
+<h3>Email and password accounts</h3>
+<p>If you register with an email address and password instead, the address and display name
+are stored in the app's on-device database and the password is stored <strong>only as a
+SHA-256 hash in the device Keychain</strong>. Neither the address nor the password ever leaves
+your device — there is no server to send them to, no verification email, and no password
+reset by mail.</p>
+<h3>Delete Account</h3>
+<p>Settings → Account → <strong>Delete account</strong> removes your account from the device. It
+permanently erases the account record from the on-device database and the matching
+Keychain entry — the stored password hash for an email account, or the cached Apple
+identifier, name, and email for a Sign in with Apple account — and returns the app to
+the signed-out state it was in before.</p>
+<p>Two things Delete Account deliberately does <strong>not</strong> do:</p>
+<ul>
+<li><strong>It does not erase your widgets, habits, photos, or history.</strong> Those were never tied
+  to the account; they are local app data that exists whether you sign in or not. To
+  remove them too, use Settings → Advanced → <strong>Delete all data</strong>, or delete the app.</li>
+<li><strong>It cannot clear Apple's own record</strong> that you used Sign in with Apple with
+  WidgetCanvas. Because the app has no server, it cannot call Apple's token-revocation
+  API — that call requires a server-signed secret and a serverless app has nowhere to
+  sign it. To remove Apple's record as well, go to <strong>Settings → your name → Sign in with
+  Apple → WidgetCanvas → Stop Using Apple Account</strong> on your device.</li>
+</ul>
+<p>Because nothing ever leaves your device, there is no copy of your account for the
+developer to hold, export, or erase, and no deletion request you need to send. If you
+have a question about any of it, email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<h2>Purchases</h2>
+<p>WidgetCanvas Pro is sold as a monthly subscription, a yearly subscription, or a one-time
+lifetime unlock. <strong>Every purchase is processed entirely by Apple through the App Store.</strong></p>
+<ul>
+<li>Apple bills your Apple Account. The developer never sees, receives, or stores your
+  name, billing address, card number, or any other payment information — none of it
+  passes through WidgetCanvas.</li>
+<li>What the app keeps is a single on-device flag recording whether Pro is currently
+  unlocked, recomputed from the App Store's own entitlement records. It is not a
+  receipt, not an account, and not linked to you. It is one of the small values that can
+  sync through your own iCloud account so your other devices know too.</li>
+<li>Buying and restoring are the only moments a WidgetCanvas screen involves the network,
+  and that exchange is Apple's, between your device and the App Store.</li>
+<li>Apple's handling of the transaction is covered by
+  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Refunds are handled by
+  Apple, not by the developer.</li>
+</ul>
 <h2>Apple services and device data WidgetCanvas relies on</h2>
 <p>WidgetCanvas only reads the data sources you explicitly add to a widget, and only after
 you grant permission:</p>
@@ -42,19 +115,26 @@ you grant permission:</p>
 <li><strong>Health (HealthKit)</strong> — only the specific metrics you choose (for example steps,
   heart rate, or sleep) so the Health widget can display them. Read-only; WidgetCanvas
   never writes to Health.</li>
-<li><strong>iCloud key-value store</strong> — to sync small preferences within your own account.</li>
-<li><strong>StoreKit</strong> — when you purchase Pro, the transaction is processed by Apple.
-  WidgetCanvas never receives your payment details.</li>
+<li><strong>Notifications (UserNotifications)</strong> — only if you turn on a reminder for a widget.
+  Reminders are scheduled on your device; nothing is sent through a server.</li>
+<li><strong>iCloud key-value store</strong> — to sync the small preferences listed above within your
+  own account.</li>
+<li><strong>StoreKit</strong> — for the optional Pro purchase, described above.</li>
+<li><strong>Sign in with Apple (AuthenticationServices)</strong> and the <strong>device Keychain</strong> — for the
+  optional account, described above.</li>
 </ul>
 <p>WidgetCanvas does not include any non-Apple SDKs that collect data.</p>
 <h2>Your control</h2>
 <ul>
 <li>You can delete any widget at any time, or remove <strong>everything</strong> in
   Settings → Advanced → "Delete all data."</li>
+<li>You can delete your account in Settings → Account → "Delete account."</li>
 <li>Deleting the app removes its local data from your device. iCloud preference copies are
-  managed through your Apple ID settings.</li>
-<li>You can revoke Calendar, Photos, Location, or Health access at any time in the iOS
-  Settings app.</li>
+  managed through your Apple Account settings.</li>
+<li>You can revoke Calendar, Photos, Location, Health, or Notification access at any time
+  in the iOS Settings app.</li>
+<li>A Pro purchase is not lost by deleting the app: it lives with your Apple Account and
+  comes back with <strong>Restore purchases</strong>.</li>
 </ul>
 <h2>Children</h2>
 <p>WidgetCanvas does not collect personal information from anyone, including children.</p>
