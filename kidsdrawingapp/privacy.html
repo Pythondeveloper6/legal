@@ -3,87 +3,156 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KidsDrawingApp &mdash; Privacy Policy</title>
+<title>Kids Drawing &mdash; Privacy Policy</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <div class="wrap">
-<a class="back" href="./">&larr; KidsDrawingApp</a>
+<a class="back" href="./">&larr; Kids Drawing</a>
 <h1>Kids Drawing — Privacy Policy</h1>
-<p><em>Last updated: 28 August 2026</em></p>
-<p>Kids Drawing is built for children, so it is built to collect nothing about them.
-This policy explains what the app does and does not do with information on your
-device.</p>
+<p><em>Last updated: 4 September 2026</em></p>
+<p>Kids Drawing is made for children, so it is built to collect nothing about them.
+This policy describes exactly what the app does and does not do with information on
+your device. It is written to be read by a parent in a couple of minutes, not by a
+lawyer.</p>
+<p><strong>Developer:</strong> Mahmoud Ahmed &middot; <strong>Contact:</strong>
+<a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
+
 <h2>The short version</h2>
 <ul>
 <li>Kids Drawing does <strong>not</strong> collect, transmit, sell, or share any data — about a
-  child or a parent.</li>
-<li>There are <strong>no accounts, no sign-in, and no way to enter personal information</strong>
-  anywhere in the app.</li>
-<li>Finished drawings and app settings are stored <strong>only on the device</strong>, inside the
-  app's own local storage.</li>
-<li><strong>No ads, no analytics, no third-party SDKs, and no trackers of any kind.</strong></li>
-<li>Color names and encouragement are <strong>spoken on-device</strong> — nothing is sent to a
-  server to generate them.</li>
+  child or a grown-up.</li>
+<li>There are <strong>no accounts, no sign-in, and no free-text field anywhere in the app</strong>
+  that could accept a name or any other personal detail.</li>
+<li>The app <strong>makes no network requests at all</strong>. Every page, colour and sound is
+  bundled inside the download, and the app works with the device in Airplane Mode.</li>
+<li><strong>No ads, no analytics, no third-party SDKs, no trackers, no in-app purchases.</strong></li>
+<li>Everything the app saves — drawings, unfinished pages, settings — stays <strong>on that
+  one device</strong>, and a grown-up can erase all of it at any time.</li>
 </ul>
-<h2>How Kids Drawing works</h2>
+
+<h2>What Kids Drawing stores on this device</h2>
 <ul>
-<li><strong>Finished artwork</strong> — when a child finishes coloring a page, the app renders the
-  picture and saves it (plus a thumbnail) as image files in the app's local
-  Application Support folder, alongside a small local index. Each picture is
-  labelled with the on-device player profile that made it, so each player only ever
-  sees their own gallery. Nothing about the artwork ever leaves the device.</li>
-<li><strong>Unfinished pages</strong> — if a child leaves a page part-coloured, the colours chosen
-  so far and how much of the tracing is done are saved locally so they can pick up
-  where they left off. This is cleared as soon as the page is finished, and by any
-  of the delete controls below.</li>
-<li><strong>Player profiles</strong> — a profile is an animal avatar picked from a fixed list. It
-  stores only that choice; there is no name, age, photo or any other detail, and no
-  free-text field anywhere in the app to type one into.</li>
+<li><strong>Finished artwork</strong> — when a child finishes colouring a page, the app renders the
+  picture and saves it (plus a small thumbnail) as image files in the app's own
+  Application Support folder, alongside a local index file. Each picture is labelled
+  with the on-device player profile that made it, so each player only ever sees their
+  own gallery. Nothing about the artwork ever leaves the device.</li>
+<li><strong>Unfinished pages</strong> — if a child leaves a page part-coloured, the colours chosen so
+  far and how much of the tracing is done are saved locally so they can pick up where
+  they left off under "Keep going". This is cleared as soon as the page is finished, and
+  by any of the delete controls below.</li>
+<li><strong>Player profiles</strong> — a profile is an animal avatar chosen from a fixed catalogue
+  built into the app (fox, panda, rocket, bear, owl, whale, dinosaur, bee). A profile
+  stores only which avatar was picked. There is no name, no age, no birthdate, no photo,
+  and no free-text field anywhere in the app to type one into. A device can hold at most
+  six profiles — it is a family device, not an account system.</li>
+<li><strong>An age band</strong> — during first-time setup a grown-up is asked "How old is your
+  child?" and picks one of three broad bands (2–3, 4–5, 6–8) so the app can pitch itself
+  appropriately. Only that one coarse band is stored, as a fixed value like <code>4-5</code>.
+  No birthdate or exact age is ever requested or stored, the band is not tied to any
+  individual profile, and it is never transmitted anywhere.</li>
 <li><strong>App settings</strong> — sound on/off, appearance (light/dark/system), language
-  (English/Arabic), and whether onboarding has been completed are saved locally
-  using <code>UserDefaults</code>. This is app configuration only, never personal information.</li>
-<li><strong>Spoken feedback</strong> — color names, tracing encouragement, and the parental-gate
-  audio prompt use Apple's on-device <code>AVSpeechSynthesizer</code>. No audio or text is
-  sent off the device to produce this speech.</li>
-<li><strong>No camera, no photo library, no microphone, no location, and no contacts</strong> are
-  accessed by the app.</li>
-<li><strong>No network requests</strong> are made by the app at all — Kids Drawing works
-  completely offline.</li>
+  (English/Arabic), and whether onboarding has been completed. This is app configuration,
+  never personal information.</li>
+<li>All of the above is kept in the app's own local storage on that one device — image
+  files in Application Support, everything else in the app's private <code>UserDefaults</code>.
+  It is never uploaded, never backed up to a server of ours, and never shared with anyone.
+  It travels only inside your own Apple device backup, if you use one.</li>
 </ul>
+
+<h2>What Kids Drawing never does</h2>
+<ul>
+<li><strong>No network requests.</strong> The app contains no networking code, no web view, no
+  remote configuration, and no way for a child to reach the internet, a store, an
+  advertisement, or another person from inside it.</li>
+<li><strong>No permissions.</strong> The app declares no privacy-sensitive permission at all — no
+  camera, photo library, microphone, location, contacts, notifications, health data, or
+  advertising identifier — so iOS never shows your child a permission prompt.</li>
+<li><strong>No third-party code.</strong> There are no advertising, analytics, attribution, crash
+  reporting or social SDKs of any kind bundled in the app.</li>
+<li><strong>No purchases.</strong> There is no in-app purchase, no subscription, and no store of any
+  kind inside the app.</li>
+</ul>
+
+<h2>Spoken feedback</h2>
+<p>Colour names, tracing encouragement, and the read-aloud prompt on the grown-ups gate
+are spoken using Apple's on-device <code>AVSpeechSynthesizer</code>. No text or audio is sent
+off the device to produce that speech, and the microphone is never used — the app only
+speaks, it never listens.</p>
+
 <h2>How long artwork is kept</h2>
-<p>Each player keeps their newest 60 finished pictures on the device. When a player
-saves a 61st, the oldest one — and both of its image files — is removed
-automatically, so the app cannot grow without bound on a shared family iPad.
-Nothing is archived elsewhere first: removed means deleted from the device.</p>
-<h2>The parents' corner</h2>
-<p>Settings, the activity summary, artwork export and every delete control sit behind
-a parental gate (a spelled-out-number challenge a young child can't read or solve).
-Repeated wrong answers pause the gate for a minute. This is a soft barrier to keep
-the grown-up area for grown-ups — it is not an account system, and nothing typed
-there is transmitted anywhere.</p>
+<p>Each player keeps their newest 60 finished pictures on the device. When a player saves
+a 61st, the oldest one — and both of its image files — is removed automatically, so the
+app can never grow without bound on a shared family iPad. Nothing is archived elsewhere
+first: removed means deleted from the device.</p>
+
+<h2>Children's privacy</h2>
+<p>Kids Drawing is designed to be used directly by children, is submitted to the App Store
+<strong>Kids Category</strong>, and carries a <strong>4+</strong> age rating.</p>
+<ul>
+<li><strong>We collect no personal information from anyone, including children.</strong> Because
+  nothing is collected and nothing is transmitted, there is no profile of your child
+  anywhere, and nothing about your child exists on any server of ours.</li>
+<li><strong>COPPA (US).</strong> The Children's Online Privacy Protection Act governs the online
+  collection of personal information from children under 13. Kids Drawing collects none:
+  no name, no email address, no screen name, no photo, no voice recording, no location,
+  and no persistent identifier used for tracking. There is therefore no parental-consent
+  flow, because there is nothing to consent to.</li>
+<li><strong>GDPR-K (EU/UK) and similar laws.</strong> Article 8 of the GDPR (and the UK Age
+  Appropriate Design Code) concerns the processing of children's personal data. Kids
+  Drawing performs no such processing: no personal data is collected, no profiling or
+  automated decision-making takes place, no data is shared with any third party, and no
+  data leaves the device, so there is no international transfer and no lawful basis is
+  required.</li>
+<li><strong>No behavioural advertising and no tracking.</strong> The app shows no ads at all, of any
+  kind, and never builds a profile of a child for any purpose.</li>
+<li><strong>No contact with strangers.</strong> There is no chat, no comments, no community, no user
+  accounts, and no way for a child to send or receive anything.</li>
+<li><strong>No links out of the app.</strong> The app opens no web browser and no external link from
+  any child-facing screen.</li>
+<li><strong>Your rights as a parent.</strong> Because nothing is collected, there is nothing to
+  request, correct, or delete from us. Everything your child creates is under your own
+  control on your own device, and the controls below erase it completely.</li>
+</ul>
+
+<h2>The grown-ups area</h2>
+<p>Settings, the activity summary, artwork export and every delete control sit behind a
+parental gate: a four-digit challenge spelled out in words that a young child can't read
+or solve. Five wrong answers pause the gate for a minute. This is a soft barrier that
+keeps grown-up controls away from little thumbs — it is not an account, it stores no
+password, and nothing entered there is transmitted anywhere.</p>
+
 <h2>Your control</h2>
-<p>All of these live behind the parental gate, so a child cannot delete a sibling's
-work — or their own — by accident:
-- <strong>Grown-ups → Manage artwork</strong> — delete a single picture, or every picture
-  belonging to one player.
-- <strong>Grown-ups → Manage artwork → Export</strong> — save a player's pictures to Files or
-  Photos, or share them yourself. The app never shares anything on its own; there
-  is no in-app posting, messaging or community feature of any kind.
-- <strong>Grown-ups → Settings → Erase everything</strong> — removes every player's pictures,
-  every unfinished page, and all settings (including appearance and language) from
-  this device. This cannot be undone.
-- Deleting the app removes all of its local data from your device.</p>
-<h2>Children</h2>
-<p>Kids Drawing is designed for children and collects no personal information from
-anyone, including children. There is no way to enter a name, birthdate, photo, or
-any other identifying detail anywhere in the app.</p>
+<p>All of these live behind the parental gate, so a child cannot delete a sibling's work —
+or their own — by accident.</p>
+<ul>
+<li><strong>Grown-ups → Manage artwork</strong> — delete a single picture, or every picture belonging
+  to one player.</li>
+<li><strong>Grown-ups → Manage artwork → Export</strong> — hands a player's pictures to the standard
+  iOS share sheet, which you drive: from there you may save them to Files or Photos,
+  AirDrop them, or send them wherever you choose. The app never shares anything on its
+  own, and there is no in-app posting, messaging or community feature of any kind.</li>
+<li><strong>Grown-ups → Settings → Erase everything</strong> — removes every player's pictures, every
+  unfinished page, every profile and all settings (including appearance and language) from
+  this device. This cannot be undone.</li>
+<li>Deleting the app removes all of its local data from your device.</li>
+</ul>
+
+<h2>App Store privacy label</h2>
+<p>Kids Drawing is declared on the App Store as <strong>Data Not Collected</strong>: no data used to
+track you, no data linked to you, and no data not linked to you.</p>
+
 <h2>Changes</h2>
-<p>If this policy changes, the "Last updated" date above will change accordingly.</p>
+<p>If this policy changes, the "Last updated" date above will change with it, in the same
+release as the behaviour it describes.</p>
+
 <h2>Contact</h2>
-<p>Questions about privacy? Email <strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+<p>Questions about privacy? Email
+<strong><a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></strong>.</p>
+
 <footer>
-  <p>KidsDrawingApp &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
+  <p>Kids Drawing &middot; <a href="./">Legal &amp; Support</a> &middot; <a href="../">All apps</a><br>
   Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p>
 </footer>
 </div>
