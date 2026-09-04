@@ -29,6 +29,35 @@ in-app purchases.</p>
 Tap to log a meal and it's timestamped immediately — that's all Sundial
 strictly needs. You can add a note, calories, or macros if you want them, but
 none of it is required.</p>
+<p><strong>What are the different ways to add nutrition to a meal?</strong>
+Four, and you can pick whichever fits: type numbers in by hand, <strong>describe</strong>
+the meal in words ("two eggs and toast"), <strong>photograph</strong> it, or <strong>scan a
+barcode</strong> on packaging. Whichever route you use, Sundial always shows you the
+result first so you can check, adjust, or discard it before anything is
+logged — nothing is saved automatically.</p>
+<p><strong>What does describing or photographing a meal need?</strong>
+Both use Apple's on-device AI, so they need an Apple Intelligence-capable
+device. Describing a meal in words needs <strong>iOS 26 or later</strong>; photographing
+one needs <strong>iOS 27 or later</strong>. Both are processed <strong>entirely on the device</strong>
+— the text or photo never leaves your iPhone, and Apple's cloud AI (Private
+Cloud Compute) is never used.</p>
+<p><strong>"On-device AI isn't available" — what do I do?</strong>
+That message means either your device can't run it, Apple Intelligence is
+turned off, or the on-device model is still downloading for the first time.
+You can still log the meal — just type in the foods and amounts by hand
+instead, or turn on Apple Intelligence in Settings and try again later if the
+model was still downloading.</p>
+<p><strong>What does scanning a barcode need?</strong>
+Just a camera, on any supported device — there's no OS-version requirement.
+The scan itself happens on-device; looking up the product sends only the
+barcode's number to Open Food Facts, a free public food database, and only
+at the moment you scan or type it. See the
+<a href="./privacy.html">Privacy Policy</a> for exactly what that does and doesn't send.</p>
+<p><strong>Why can't Sundial find my barcode?</strong>
+Most likely because that product simply isn't in Open Food Facts yet — it's
+a community-maintained database, not every product on every shelf is listed,
+especially anything less common or sold outside a few countries. That's the
+normal case, not a bug. You can still enter the food by hand.</p>
 <p><strong>How do I read the Day Ring?</strong>
 The Day Ring is a 24-hour dial with <strong>noon at the top</strong>, so your day reads
 left-to-right the way you'd picture it: morning on the left half, evening on
@@ -67,11 +96,16 @@ rather than what.</p>
 <p><strong>Where is my data kept? Can you see it?</strong>
 On your device only, in a local file. There is no Sundial server, so there is
 nowhere for your data to be sent to us. No analytics, no ad SDKs, no
-third-party trackers. The <a href="./privacy.html">Privacy Policy</a> spells out every
-category.</p>
+third-party trackers. The one exception is a barcode lookup, which sends
+only the barcode's digits to Open Food Facts — never to us. The
+<a href="./privacy.html">Privacy Policy</a> spells out every category.</p>
 <p><strong>Does Sundial need an internet connection?</strong>
-No. Everything — logging, the Day Ring, insights, notifications — runs
-entirely on your device.</p>
+No, with one narrow exception. Logging, the Day Ring, insights,
+notifications, and describing or photographing a meal all run entirely on
+your device. The only feature that needs a connection is <strong>looking up a
+scanned barcode</strong>, which sends just the barcode number to Open Food Facts —
+and only when you use it. Without a connection, that lookup fails, but you
+can still enter the food by hand.</p>
 <p><strong>How do I export my data?</strong>
 Use the export option in Sundial's settings to write everything to a file you
 can save or send wherever you like.</p>

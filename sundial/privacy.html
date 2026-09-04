@@ -10,12 +10,15 @@
 <div class="wrap">
 <a class="back" href="./">&larr; Sundial</a>
 <h1>Sundial — Privacy Policy</h1>
-<p><em>Effective 4 September 2026</em></p>
+<p><em>Effective 5 September 2026</em></p>
 <p>Sundial is a meal-timing tracker. It only cares about <strong>when</strong> you eat, not what
 — and it was built on a single rule: <strong>your data is yours, it stays on your
 device, and the developer never receives it.</strong></p>
 <p>There is no Sundial server. Not a small one, not an anonymous one. There is
-nothing on our end for your data to be sent to.</p>
+nothing on our end for your data to be sent to. There is exactly <strong>one</strong>
+feature in Sundial that talks to anyone over the network — looking up a
+scanned barcode — and it is covered in full below, under
+"Barcode lookups: the one feature that reaches the network."</p>
 <h2>The short version</h2>
 <ul>
 <li>Sundial does <strong>not</strong> collect, transmit, sell, or share your personal data. The
@@ -23,6 +26,17 @@ nothing on our end for your data to be sent to.</p>
 <li>Everything you log — meal times, and any optional notes, calories or macros —
   is stored <strong>on your device, in a single local file</strong>. There is no account and
   no cloud database of Sundial's own.</li>
+<li><strong>Describing a meal in words, or photographing it</strong>, is processed <strong>entirely
+  on your device</strong> by Apple's on-device Foundation Models. Apple's cloud AI
+  (Private Cloud Compute) is <strong>deliberately not used</strong> — nothing about your
+  meal is sent anywhere, to Apple, to the developer, or to anyone else.</li>
+<li><strong>Scanning a barcode</strong> is the one exception to "nothing leaves the device":
+  looking up a product sends <strong>only that barcode's digits</strong> to Open Food
+  Facts, a third-party food database — and only when you scan or type one
+  yourself. See below for exactly what that does and doesn't include.</li>
+<li>Everyday nutrition figures come from a copy of <strong>USDA FoodData Central</strong>
+  bundled <strong>inside the app</strong> — looking one up is a local, on-device search,
+  not a network request.</li>
 <li>Sundial can optionally <strong>read sleep data from Apple Health, read-only and on
   device</strong>, only after you grant permission. It never writes anything back to
   Health, and never sends what it reads anywhere.</li>
@@ -47,6 +61,21 @@ nothing on our end for your data to be sent to.</p>
 <td>Meal times, and any notes, calories or macros you choose to add</td>
 <td>On device, in a local JSON file</td>
 <td>No</td>
+</tr>
+<tr>
+<td>A meal description you type</td>
+<td>Processed on device only; nothing is sent anywhere</td>
+<td>No</td>
+</tr>
+<tr>
+<td>A meal photo you take</td>
+<td>Read on device by the on-device model, then discarded — never stored, never leaves the device</td>
+<td>No</td>
+</tr>
+<tr>
+<td>A barcode you scan or type</td>
+<td>Only the digits, sent to Open Food Facts — and only when you scan or type it</td>
+<td>No (a third party, not the developer — see "Barcode lookups" below)</td>
 </tr>
 <tr>
 <td>Your eating-window and fasting-window settings (12:12, 14:10, 16:8, 18:6, or none)</td>
@@ -79,8 +108,9 @@ nothing on our end for your data to be sent to.</p>
 it is used for advertising, profiling, analytics, or anything else. None of it
 is transmitted anywhere.</p>
 <h2>Where your data can leave the device</h2>
-<p>Sundial itself never sends your data anywhere. Data can leave the device only in
-two ways, both under your own control:</p>
+<p>Sundial itself never sends your logged data — meal times, notes, calories,
+macros, sleep, settings — anywhere. Data can leave the device only in three
+ways, all under your own control:</p>
 <ul>
 <li><strong>Your own iCloud device backup.</strong> If you back up your iPhone or iPad to
   iCloud, Apple's normal backup includes the app's local data along with the
@@ -90,6 +120,10 @@ two ways, both under your own control:</p>
 <li><strong>An export you start yourself.</strong> Sundial can write your data to a file so
   you can save it or send it wherever you choose. Until you do that, nothing
   leaves the device.</li>
+<li><strong>Looking up a barcode.</strong> This is the one thing Sundial itself ever sends
+  over the network, and it sends only a barcode's digits, only when you scan
+  or type one. See "Barcode lookups: the one feature that reaches the
+  network," below, for exactly what that does and doesn't include.</li>
 </ul>
 <h2>Apple Health</h2>
 <p>Sundial can ask for <strong>read-only access to your sleep data</strong> in Apple Health, so
@@ -125,6 +159,70 @@ insight is labelled with an evidence tier — Strong, Moderate, Early, or
 Contested — so you can see how settled the underlying research is. Generating
 an insight does not send your data anywhere: the comparison happens locally,
 and nothing about your eating pattern is transmitted to produce it.</p>
+<h2>Describing or photographing a meal: on-device AI</h2>
+<p>Sundial can turn a typed description ("two eggs and toast") or a photo of a
+meal into a list of foods, using Apple's on-device Foundation Models
+(<code>SystemLanguageModel</code>) — the same on-device intelligence behind other Apple
+Intelligence features on your iPhone.</p>
+<ul>
+<li><strong>Describing a meal</strong> requires iOS 26 or later and an Apple
+  Intelligence-capable device. What you type is processed <strong>entirely on your
+  device</strong>.</li>
+<li><strong>Photographing a meal</strong> requires iOS 27 or later and an Apple
+  Intelligence-capable device. The photo is read by the on-device model and
+  then discarded. Sundial does <strong>not</strong> store the photo, and the photo
+  <strong>never leaves the device</strong>.</li>
+<li>Both routes run against Apple's <strong>on-device</strong> model only. Apple's cloud AI
+  service, Private Cloud Compute, is <strong>deliberately not used</strong> for either —
+  nothing about your meal, typed or photographed, is ever sent to Apple, to
+  the developer, or to anyone else.</li>
+<li>The model never invents a calorie or nutrient number. It only identifies
+  what food was named or shown; every nutrition figure that follows comes
+  from the bundled USDA database or, for a scanned barcode, Open Food Facts
+  (see below).</li>
+<li>If on-device AI isn't available — an older device, Apple Intelligence
+  turned off, or the on-device model still downloading — Sundial says so and
+  lets you enter foods and amounts by hand instead. Nothing is sent anywhere
+  to check that or to work around it.</li>
+</ul>
+<h2>Barcode lookups: the one feature that reaches the network</h2>
+<p>Scanning or typing a packaged product's barcode is the <strong>only</strong> thing Sundial
+ever sends over the network, and only when you do it yourself.</p>
+<ul>
+<li><strong>What is sent.</strong> The barcode's digits, and nothing else. <strong>Looking up a
+  barcode sends only that number to Open Food Facts.</strong></li>
+<li><strong>What is not sent.</strong> No photo, no meal description, no log entry, no
+  device or account identifier, no analytics, no location. The request
+  carries the barcode number and a User-Agent string identifying Sundial to
+  Open Food Facts, as Open Food Facts asks integrators to send — nothing
+  more.</li>
+<li><strong>Who receives it.</strong> <a href="https://world.openfoodfacts.org">Open Food Facts</a>, a
+  free, keyless, community-maintained food database — not the developer, and
+  not Apple. As with any request to any server on the internet, Open Food
+  Facts also sees the requesting IP address; that's a property of how the web
+  works, not something Sundial adds on top.</li>
+<li><strong>When it happens.</strong> Only when you explicitly scan a barcode with the
+  camera or type one in by hand. Sundial never looks up a barcode in the
+  background, on a schedule, or without you starting it.</li>
+<li><strong>If the product isn't found</strong>, that's the ordinary case, not an error —
+  most products simply aren't in Open Food Facts' database yet. You can enter
+  the food by hand instead.</li>
+<li><strong>No other feature makes a network request.</strong> Describing or photographing a
+  meal, generating insights, and everything else in Sundial runs entirely on
+  your device, as described elsewhere in this policy.</li>
+</ul>
+<p>Open Food Facts' data is published under the Open Database License (ODbL),
+which carries an attribution requirement; Sundial credits Open Food Facts by
+name wherever a scanned product's figures are shown.</p>
+<h2>Where nutrition figures come from</h2>
+<p>Figures for everyday foods come from a copy of the <strong>USDA FoodData Central</strong>
+database (Foundation Foods and SR Legacy) that ships <strong>inside the app
+itself</strong>. Looking one up is a local, on-device search — no network request,
+no lookup, nothing sent anywhere. USDA FoodData Central is U.S. government
+data in the public domain.</p>
+<p>Figures for a scanned barcode come from Open Food Facts instead, as described
+above — a community-maintained database, so figures there can vary in
+accuracy from product to product.</p>
 <h2>The safety screen</h2>
 <p>Before Sundial turns on any fasting countdown or target, it asks a short set of
 screening questions: a history of disordered eating, pregnancy or
@@ -142,6 +240,11 @@ used solely to decide, locally, which features the app shows you. See the
   because nothing arrives.</li>
 <li>No in-app purchases, so no payment or billing data ever passes through the
   app.</li>
+<li>No network request from any feature except an explicit barcode lookup, and
+  that request carries only the barcode's digits — see "Barcode lookups"
+  above.</li>
+<li>No use of Apple's Private Cloud Compute or any other cloud AI service; the
+  on-device food-capture features never leave the device.</li>
 </ul>
 <h2>Your control over your data</h2>
 <ul>
@@ -166,6 +269,10 @@ anyone, since nothing it stores ever leaves the device.</p>
 <p>If this policy changes, the effective date above changes with it, and the
 updated version is published at
 <a href="https://pythondeveloper6.github.io/legal/sundial/privacy.html">https://pythondeveloper6.github.io/legal/sundial/privacy.html</a>.</p>
+<p><strong>5 September 2026</strong> — added the sections above on describing or
+photographing a meal with on-device AI, and on barcode lookups, the one
+feature that sends anything (a barcode's digits only) over the network.
+Nothing about how existing features handle your data changed.</p>
 <h2>Contact</h2>
 <p>Questions about privacy, or anything in this policy?
 Email <strong>apps.mahmoudahmed@gmail.com</strong>.</p>
