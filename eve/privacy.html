@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eve &mdash; Privacy Policy</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Eve</a>
+<h1>Eve — Privacy Policy</h1>
+<p><em>Effective 4 September 2026</em></p>
+<p>Eve is a private wellbeing companion. It holds some of the most personal
+information a person keeps — cycle dates, pregnancy, sleep, notes about your own
+life — so the app was built on a single rule: <strong>that data is yours, it stays on
+your devices, and the developer never receives it.</strong></p>
+<p>There is no Eve server. Not a small one, not an anonymous one. There is nothing
+on our end for your data to be sent to.</p>
+<h2>The short version</h2>
+<ul>
+<li>Eve does <strong>not</strong> collect, transmit, sell, or share your personal data. The
+  developer never sees it.</li>
+<li>Everything you log is stored <strong>on your device</strong>, and — if you have iCloud
+  turned on — synced through <strong>your own private iCloud account</strong>, which belongs
+  to you, not to us.</li>
+<li>Eve reads <strong>sleep data from Apple Health, read-only and on device</strong>, only after
+  you grant permission. It is never exported, shared, or sent anywhere by Eve.</li>
+<li>There are <strong>no analytics, no advertising, and no third-party trackers</strong>. Eve
+  contains no non-Apple SDKs.</li>
+<li>You can <strong>export everything</strong> to a file, or <strong>delete everything</strong>, from inside
+  the app at any time.</li>
+</ul>
+<h2>What Eve stores, and where it stays</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where it's kept</th>
+<th>Ever reaches the developer?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Periods, symptoms, cycle history, pregnancy state</td>
+<td>On device (SwiftData), and your own private iCloud if iCloud is on</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Sleep read from Apple Health</td>
+<td>On device only</td>
+<td>No</td>
+</tr>
+<tr>
+<td>To-dos, notes, workouts, habits, learning goals, family entries</td>
+<td>On device, and your own private iCloud if iCloud is on</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Your name, theme, which modules are on, pinned tabs, discreet mode, app-lock preference</td>
+<td>On device</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Whether Eve Plus is unlocked</td>
+<td>On device, derived from Apple's own StoreKit records</td>
+<td>No</td>
+</tr>
+<tr>
+<td>A small snapshot for the home-screen widget (cycle day, sleep minutes, to-dos remaining, your name, theme)</td>
+<td>A shared App Group container on the same device, readable only by Eve and Eve's own widget</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Every one of these exists for one purpose: making Eve work for you. None of it is
+used for advertising, profiling, analytics, or anything else.</p>
+<h2>iCloud sync</h2>
+<p>If you are signed in to iCloud and iCloud is available to the app, Eve syncs your
+data through Apple's <strong>CloudKit private database</strong> so your own iPhone and iPad
+stay in step. A private database is exactly that: a container inside <strong>your</strong>
+iCloud account, governed by your Apple Account and Apple's privacy policy. The
+developer has no access to it and no ability to read anything in it.</p>
+<p>If iCloud isn't available, Eve falls back to storing everything locally on the
+device and keeps working normally.</p>
+<h2>Apple Health</h2>
+<p>Eve asks for <strong>read-only access to your sleep data</strong> in Apple Health, so your
+rest can appear on your Today view alongside the rest of your day. That is the
+only Health category Eve requests.</p>
+<ul>
+<li>The permission is <strong>optional</strong>, asked for explicitly, and can be revoked at any
+  time in the Health app under <strong>Sharing → Apps</strong>.</li>
+<li>Sleep data is read and displayed <strong>on your device</strong>. It is never uploaded,
+  exported, shared with third parties, or sent to the developer.</li>
+<li>Eve does <strong>not</strong> write anything back into Apple Health.</li>
+<li>Eve does not use Health data for advertising, marketing, or any use-based data
+  mining, and does not disclose it to anyone.</li>
+</ul>
+<h2>Face ID, Touch ID, and app lock</h2>
+<p>You can turn on <strong>App lock</strong> so Eve asks for Face ID, Touch ID, or your device
+passcode before it opens. This uses Apple's LocalAuthentication framework: iOS
+performs the check and tells Eve only "yes" or "no." Your face and fingerprint
+data never leave the Secure Enclave, and Eve never sees them.</p>
+<p>If your device has no passcode set, Eve turns app lock off rather than risk
+locking you out of your own data.</p>
+<h2>Discreet mode and notifications</h2>
+<p>Reminders are <strong>optional</strong>. If you turn one on, Eve asks for notification
+permission and then schedules the reminder <strong>on your device</strong>. No reminder is
+routed through a server — there is no push service, no remote scheduling, and
+nothing about your cycle ever travels to send you a notification.</p>
+<p><strong>Discreet mode is on by default.</strong> With it on, nothing outside the unlocked app
+— not your Today view preview, not a notification on your lock screen, not a
+widget — names cycle tracking or pregnancy. The onboarding shows you the exact
+wording a reminder would use before you agree to any of it.</p>
+<h2>Sign in with Apple</h2>
+<p>Signing in is <strong>entirely optional</strong>. Every feature of Eve, including Eve Plus,
+works fully while signed out.</p>
+<p>If you choose to sign in, Apple provides Eve with a stable identifier and, on
+your first sign-in only, your name and either your real email address or an Apple
+private-relay address. Eve keeps these on your device. <strong>No password is ever
+created, seen, or stored by the developer</strong>, and Eve has no server to send any of
+it to.</p>
+<p>To remove it: sign out inside Eve, or use <strong>Settings → Delete everything</strong>. To
+also revoke Eve's access to your Apple Account itself, go to your device's
+<strong>Settings → [your name] → Sign-In &amp; Security → Sign in with Apple</strong> and remove
+Eve from the list. That step belongs to Apple and is separate from deleting your
+data in the app.</p>
+<h2>Apple services Eve relies on</h2>
+<ul>
+<li><strong>iCloud / CloudKit</strong> — syncs your data inside your own private iCloud account.</li>
+<li><strong>HealthKit</strong> — read-only sleep, on device, with your permission.</li>
+<li><strong>LocalAuthentication</strong> — Face ID / Touch ID for app lock.</li>
+<li><strong>UserNotifications</strong> — local reminders, scheduled on device.</li>
+<li><strong>StoreKit</strong> — Apple processes every Eve Plus purchase. Eve never receives your
+  card number, billing address, or any other payment detail.</li>
+</ul>
+<p>Apple is the only party any of this ever touches, and only through the systems
+built into your own device. Apple's handling of it is covered by
+<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+<h2>What Eve does not do</h2>
+<ul>
+<li>No analytics or telemetry SDK of any kind.</li>
+<li>No advertising SDK, no ad identifiers, no tracking across apps or websites.</li>
+<li>No crash-reporting service that receives your data.</li>
+<li>No selling or sharing of personal information — there is nothing to sell,
+  because nothing arrives.</li>
+</ul>
+<h2>Your control over your data</h2>
+<ul>
+<li><strong>Export my data</strong> (Settings → Your data) writes everything Eve holds to a JSON
+  file you can save or send wherever you like.</li>
+<li><strong>Delete everything</strong> (Settings → Your data) permanently erases every period,
+  log, note, to-do, workout, habit and family entry on the device — and, if
+  iCloud sync is on, from your private iCloud too. It is immediate and cannot be
+  undone, so export first if you want a copy.</li>
+<li><strong>Turning a module off</strong> simply hides it. Nothing is deleted.</li>
+<li><strong>Deleting the app</strong> removes its local data from that device. Data already
+  synced to your own iCloud is removed with "Delete everything," or by managing
+  Eve's storage in your iCloud settings.</li>
+</ul>
+<h2>Children</h2>
+<p>Eve is intended for people aged <strong>13 and over</strong>. It is not a children's app, is
+not offered in the Kids Category, and does not knowingly collect information from
+children. If you believe a child under 13 has used Eve, note that any data
+involved lives only on that device and your own iCloud, and can be erased with
+<strong>Settings → Delete everything</strong>.</p>
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the effective date above changes with it, and the updated
+version is published at
+<a href="https://pythondeveloper6.github.io/legal/eve/privacy.html">https://pythondeveloper6.github.io/legal/eve/privacy.html</a>.</p>
+<h2>Contact</h2>
+<p>Questions about privacy, or anything in this policy?
+Email <strong>apps.mahmoudahmed@gmail.com</strong>.</p>
+<hr />
+<p><a href="./terms.html">Terms of Use</a> ·
+<a href="./medical.html">Medical Disclaimer</a> ·
+<a href="./support.html">Support</a></p>
+<footer><p>Eve &middot; Mahmoud Ahmed &middot; <a href="mailto:apps.mahmoudahmed@gmail.com">apps.mahmoudahmed@gmail.com</a></p></footer>
+</div>
+</body>
+</html>
