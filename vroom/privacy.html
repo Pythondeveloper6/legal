@@ -11,27 +11,29 @@
 <a class="back" href="./">&larr; Vroom</a>
 <h1>Vroom — Privacy Policy</h1>
 <p><em>Last updated: 4 September 2026</em></p>
-<p>Vroom is made for children, so it is built to collect nothing about them.
-This policy describes exactly what the app does and does not do with
-information on your device. It is written to be read by a parent in a
-couple of minutes, not by a lawyer.</p>
+<p>Vroom is designed for children, and its core game — building and racing —
+still collects nothing about them at all. Two things in the app are
+entirely optional and live behind a parent gate: signing in with Apple, and
+buying Vroom Plus. This policy describes exactly what each of those does
+and does not do with information on your device. It is written to be read
+by a parent in a couple of minutes, not by a lawyer.</p>
 <p><strong>Developer:</strong> Mahmoud Ahmed · <strong>Contact:</strong> apps.mahmoudahmed@gmail.com</p>
 <h2>The short version</h2>
 <ul>
-<li>Vroom does <strong>not</strong> collect, transmit, sell, or share any data — about a
-  child or a grown-up.</li>
-<li>There are <strong>no accounts and no sign-in</strong>. The only free-text field in the
-  app is an optional name for a saved build in the Garage (like "Speedy
-  Red"); it is never required, never leaves the device, and is not
-  checked against anything.</li>
-<li>The app <strong>makes no network requests at all</strong>. Every part, track and sound
-  is bundled inside the download, and the app works with the device in
-  Airplane Mode.</li>
-<li><strong>No ads, no analytics, no third-party SDKs, no trackers, no in-app
-  purchases.</strong></li>
-<li>Everything the app saves — builds, stars, unlocked parts, settings —
-  stays <strong>on that one device</strong>, and a grown-up can erase all of it at any
-  time.</li>
+<li>The core game — building, racing, stars, unlocks — collects <strong>nothing</strong>
+  about a child or a grown-up, and never has.</li>
+<li>Two optional, adult-facing features exist behind a parent gate:
+  <strong>Sign in with Apple</strong> and <strong>Vroom Plus</strong>, an optional subscription. Both
+  are entirely optional; the app works fully without either.</li>
+<li>Signing in stores an Apple identifier <strong>only in the device Keychain</strong>. It
+  is <strong>never transmitted anywhere</strong> — Vroom makes no network requests of
+  its own and there is no server of ours.</li>
+<li>Purchases are handled <strong>entirely by Apple</strong>; Vroom never sees a payment
+  detail.</li>
+<li><strong>No ads, no analytics, no third-party SDKs, no trackers.</strong></li>
+<li>Everything the app saves — builds, stars, unlocked parts, settings, and
+  the optional sign-in — stays <strong>on that one device</strong>, and a grown-up can
+  remove all of it at any time.</li>
 </ul>
 <h2>What Vroom stores on this device</h2>
 <ul>
@@ -51,80 +53,176 @@ couple of minutes, not by a lawyer.</p>
   ours, or shared with anyone. It travels only inside your own Apple
   device backup, if you use one.</li>
 </ul>
+<h2>Sign in with Apple (optional)</h2>
+<p>Settings — behind the parent gate — offers an optional Sign in with Apple
+button. Nobody has to use it; every part of Vroom, including Garage builds,
+progress and Vroom Plus, works exactly the same whether or not anyone signs
+in.</p>
+<ul>
+<li><strong>What's stored.</strong> The stable identifier Apple assigns this person for
+  this app is saved to the device's <strong>Keychain</strong>. If the grown-up chooses
+  to share a name or email with the app through Apple's own sign-in sheet
+  (Apple only offers that choice the very first time an Apple ID
+  authorizes Vroom), that name is saved to the Keychain too. None of it is
+  written to <code>progress.json</code>, to <code>UserDefaults</code>, or anywhere else.</li>
+<li><strong>Never transmitted.</strong> Vroom makes no network requests of its own, has
+  no server, and sends the Apple identifier, name or email nowhere. They
+  exist only in that device's Keychain, for that one device.</li>
+<li><strong>Why it exists.</strong> Purely to identify the grown-up in charge of the
+  device, for a future purchase restore. It does not unlock anything by
+  itself, and it never appears anywhere a child can see it.</li>
+<li><strong>Sign Out.</strong> A visible Sign Out control, behind the parent gate, clears
+  the stored Apple identifier and name from the Keychain. There is no
+  server-side account to leave behind — the same Apple ID can sign in
+  again at any time.</li>
+<li><strong>Delete Account.</strong> A separate, visible Delete Account control, behind
+  the parent gate and its own confirmation, also clears the Keychain entry.
+  Because there is no account of ours on any server, deleting it locally
+  is the whole of what "delete" can mean here — there is nothing left on
+  our side to remove.</li>
+<li><strong>Automatic re-check.</strong> Every time the app launches, Vroom asks Apple
+  whether a stored credential is still valid, and signs out locally on
+  this device if the grown-up revoked Vroom's access from Apple ID
+  settings elsewhere.</li>
+</ul>
+<h2>Vroom Plus (optional subscription)</h2>
+<p>Vroom Plus is an optional, auto-renewable subscription reachable only from
+behind the parent gate (in Settings, or when choosing certain paint
+colours). It unlocks <strong>cosmetic paint colours only</strong> — it never sells
+stars, progress, tier unlocks, hints, or any accessibility or data control,
+and the whole learning loop (building, racing, stars, unlocking parts)
+stays free whether or not anyone subscribes.</p>
+<ul>
+<li><strong>Two plans:</strong> a monthly subscription and a yearly subscription, each
+  with the same 7-day free trial and the same entitlement — only the
+  billing period differs. Exact current prices and trial terms are shown
+  on the in-app paywall and on the App Store product page before you buy.</li>
+<li><strong>Apple handles the purchase.</strong> Buying, renewing, and cancelling Vroom
+  Plus all go through Apple's own in-app purchase system and your Apple
+  Account. Vroom never collects, sees, or stores any payment detail (no
+  card number, billing address, or similar) — that information stays with
+  Apple.</li>
+<li><strong>What Vroom knows.</strong> The app checks with Apple (via StoreKit) whether
+  the signed-in Apple Account currently holds an active Vroom Plus
+  entitlement, so it can unlock the paint colours. Vroom does not receive
+  or store your name, email or payment information as part of that check,
+  and it makes no network request of its own to do it — the check happens
+  entirely through Apple's on-device StoreKit framework.</li>
+<li><strong>Restore Purchases.</strong> A Restore Purchases control on the paywall asks
+  Apple to re-sync this device's entitlements — useful after reinstalling
+  the app or moving to a new device. It does not require signing in with
+  Apple.</li>
+<li>See the <a href="./terms.html">Terms of Use</a> for the full auto-renewal, cancellation
+  and trial terms.</li>
+</ul>
 <h2>What Vroom never does</h2>
 <ul>
-<li><strong>No network requests.</strong> The app contains no networking code, no web
-  view, no remote configuration, and no way for a child to reach the
-  internet, a store, an advertisement, or another person from inside it.
-  Every race is simulated entirely on the device using a deterministic
-  physics engine — the same build and track always produce the same run.</li>
-<li><strong>No permissions.</strong> The app declares no privacy-sensitive permission at
-  all — no camera, photo library, microphone, location, contacts,
-  notifications, health data, or advertising identifier — so iOS never
-  shows your child a permission prompt.</li>
+<li><strong>No network requests of its own.</strong> The app contains no networking code,
+  no web view, no remote configuration, and no way for a child to reach
+  the internet, an advertisement, or another person from inside it. Every
+  race is simulated entirely on the device using a deterministic physics
+  engine — the same build and track always produce the same run. Sign in
+  with Apple and Vroom Plus purchases are handled by Apple's own system
+  frameworks (<code>AuthenticationServices</code> and <code>StoreKit</code>), not by any server
+  or network code of ours.</li>
+<li><strong>No permissions beyond Apple's own frameworks.</strong> The app declares no
+  privacy-sensitive permission at all — no camera, photo library,
+  microphone, location, contacts, notifications, health data, or
+  advertising identifier — so iOS never shows your child a permission
+  prompt.</li>
 <li><strong>No third-party code.</strong> There are no advertising, analytics,
   attribution, crash reporting or social SDKs of any kind bundled in the
   app.</li>
-<li><strong>No purchases.</strong> There is no in-app purchase, no subscription, and no
-  store of any kind inside the app.</li>
 </ul>
 <h2>Home Screen widget</h2>
 <p>Vroom's widget shows today's daily challenge — the track and goal of the
 day. That challenge is worked out from the date alone, so the widget reads
-<strong>no saved progress at all</strong>: it holds no stars, no scores, no builds and
-no settings, and it never makes a network request. Nothing about your child
+<strong>no saved progress at all</strong>: it holds no stars, no scores, no builds, no
+settings, and no sign-in state, and it never makes a network request.
+Nothing about your child, or about a grown-up's account or purchases,
 appears on the Home Screen.</p>
 <h2>Children's privacy</h2>
-<p>Vroom is designed to be used directly by children, is submitted to the App
-Store <strong>Kids Category</strong>, and carries a <strong>4+</strong> age rating.</p>
+<p>Vroom is designed to be used directly by children and carries a <strong>4+</strong> age
+rating with a parent gate in front of Settings, every external link,
+sign-in and purchases. Vroom is <strong>not</strong> submitted to the App Store Kids
+Category, because that category does not permit account creation or data
+collection of any kind (App Store guideline 5.1.4) — and Vroom now offers
+an optional account and an optional purchase, both confined behind the
+parent gate and both aimed at the grown-up, never the child.</p>
 <ul>
-<li><strong>We collect no personal information from anyone, including children.</strong>
-  Because nothing is collected and nothing is transmitted, there is no
-  profile of your child anywhere, and nothing about your child exists on
-  any server of ours.</li>
+<li><strong>The core game collects no personal information from anyone.</strong> Building,
+  racing, stars and unlocks involve no data collection, no profile, and
+  nothing transmitted, whether the player is a child or an adult.</li>
+<li><strong>The optional adult-facing features collect a minimum, and only from
+  the grown-up who chooses to use them.</strong> Signing in with Apple stores an
+  identifier (and, optionally, a name/email) in the device Keychain only;
+  Vroom Plus purchases are handled entirely by Apple. Neither is
+  reachable without first passing the parent gate, and neither is ever
+  transmitted to us.</li>
 <li><strong>COPPA (US).</strong> The Children's Online Privacy Protection Act governs the
   online collection of personal information from children under 13. Vroom
-  collects none: no name, no email address, no screen name, no photo, no
-  voice recording, no location, and no persistent identifier used for
-  tracking. There is therefore no parental-consent flow, because there is
-  nothing to consent to.</li>
+  itself operates no server and transmits nothing it stores to anyone;
+  the only account-like feature (Sign in with Apple) sits behind a parent
+  gate, is optional, and is intended for the grown-up managing the device,
+  not the child.</li>
 <li><strong>GDPR-K (EU/UK) and similar laws.</strong> Article 8 of the GDPR (and the UK
   Age Appropriate Design Code) concerns the processing of children's
-  personal data. Vroom performs no such processing: no personal data is
-  collected, no profiling or automated decision-making takes place, no
-  data is shared with any third party, and no data leaves the device, so
-  there is no international transfer and no lawful basis is required.</li>
+  personal data. Vroom's gameplay performs no such processing at all: no
+  personal data is collected from play, no profiling or automated
+  decision-making takes place, and no gameplay data leaves the device. The
+  optional sign-in and purchase live behind the parent gate and are
+  designed for the adult, not the child.</li>
 <li><strong>No behavioural advertising and no tracking.</strong> The app shows no ads at
-  all, of any kind, and never builds a profile of a child for any purpose.</li>
+  all, of any kind, and never builds a profile of anyone for advertising
+  purposes.</li>
 <li><strong>No contact with strangers.</strong> There is no chat, no comments, no
-  community, no user accounts, and no way for a child to send or receive
-  anything.</li>
-<li><strong>No links out of the app without a parent.</strong> Settings — the only place
-  in Vroom with an external link (rating the app, contacting support, or
-  opening this Privacy Policy or the Terms of Use) — sits behind a parent
-  gate, so a child cannot open a web browser or leave the app on their
-  own.</li>
-<li><strong>Your rights as a parent.</strong> Because nothing is collected, there is
-  nothing to request, correct, or delete from us. Everything your child
-  builds is under your own control on your own device, and the control
-  below erases it completely.</li>
+  community, and no way for a child to send or receive anything from or
+  to another person.</li>
+<li><strong>No links out of the app without a parent.</strong> Settings — where sign-in,
+  Vroom Plus, and every external link (rating the app, contacting support,
+  or opening this Privacy Policy or the Terms of Use) live — sits behind a
+  parent gate, so a child cannot open a web browser, sign in, buy
+  anything, or leave the app on their own.</li>
+<li><strong>Your rights as a parent.</strong> Because gameplay collects nothing, and the
+  optional account/purchase data is confined to your own device's
+  Keychain and to Apple's own systems, there is nothing held by us to
+  request, correct, or delete. Sign Out and Delete Account (both behind
+  the parent gate) clear the local Apple credential immediately, and
+  Settings → Delete all data erases everything else.</li>
 </ul>
 <h2>The parent gate</h2>
 <p>Settings sits behind a parent gate — a short challenge a young child can't
-read or solve. This is a soft barrier that keeps grown-up controls, and
-the app's only external links, away from little thumbs. It is not an
-account, it stores no password, and nothing entered there is transmitted
-anywhere.</p>
+read or solve. This is a soft barrier that keeps grown-up controls — sign-in,
+Vroom Plus, and the app's external links — away from little thumbs. The gate
+itself is not an account, stores no password, and nothing entered there is
+transmitted anywhere.</p>
 <h2>Your control</h2>
 <ul>
+<li><strong>Settings → Sign Out</strong> (behind the parent gate) — clears the stored
+  Apple identifier and name from this device's Keychain. You can sign in
+  again at any time with the same Apple ID.</li>
+<li><strong>Settings → Delete Account</strong> (behind the parent gate, with its own
+  confirmation) — also clears the Keychain entry. There is no
+  server-side account, so this is the complete deletion available.</li>
 <li><strong>Settings → Delete all data</strong> (behind the parent gate) — removes every
   saved build, every star, every unlocked part and paint, and resets all
   settings on this device. This cannot be undone.</li>
-<li>Deleting the app removes all of its local data from your device.</li>
+<li><strong>Cancelling Vroom Plus</strong> — see the <a href="./terms.html">Terms of Use</a> for how to
+  manage or cancel a subscription through your Apple Account. Cancelling
+  does not delete anything Vroom stores.</li>
+<li>Deleting the app removes all of its local data, including the Keychain
+  entry, from your device.</li>
 </ul>
 <h2>App Store privacy label</h2>
-<p>Vroom is declared on the App Store as <strong>Data Not Collected</strong>: no data used
-to track you, no data linked to you, and no data not linked to you.</p>
+<p>Vroom's App Store privacy label declares:</p>
+<ul>
+<li><strong>Data used to track you:</strong> None.</li>
+<li><strong>Data linked to you:</strong> Identifiers (the Sign in with Apple user
+  identifier) and Contact Info (name and email, only if you choose to
+  share them through Apple's own sign-in sheet). Both are used for <strong>App
+  Functionality</strong> only, and both stay in this device's Keychain.</li>
+<li><strong>Data not linked to you:</strong> None.</li>
+</ul>
 <h2>Changes</h2>
 <p>If this policy changes, the "Last updated" date above will change with
 it, in the same release as the behaviour it describes.</p>
