@@ -54,17 +54,17 @@
 <header>
   <p class="eyebrow">Incline for iPhone</p>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective 1 September 2026 &middot; Published by Mahmoud Ahmed</p>
+  <p class="meta">Effective 16 September 2026 &middot; Published by Mahmoud Ahmed</p>
 </header>
 
 <h2>The short version</h2>
 <div class="card">
 <ul>
-  <li>Incline has <strong>no accounts, no sign-in, and no servers</strong>. There is nothing to register for and nothing to log in to.</li>
+  <li>There is <strong>nothing to sign up for</strong>. Sign in with Apple is optional (in Settings) and only stores the name or identifier Apple gives, on this iPhone's keychain — there is no Incline account and no Incline server.</li>
   <li>Incline contains <strong>no networking code of its own</strong>. It cannot upload your workouts, because it has no way to send them anywhere.</li>
   <li>There is <strong>no analytics, no crash-reporting service, no advertising, and no third-party SDK</strong> of any kind in the app.</li>
   <li>Your workouts and settings live in a database <strong>on your iPhone</strong>, inside the app's own storage.</li>
-  <li>Incline writes to <strong>Apple Health</strong> only if you grant permission, and only if you subscribe to Incline Plus. It never writes resting or basal energy, and never edits another app's data. It can also <em>read</em> a set of Health values, but only for the optional Body trends screen, and only after you allow it.</li>
+  <li>Incline writes to <strong>Apple Health</strong> only if you grant permission — free on every plan, whether or not you subscribe to Incline Plus. It never writes resting or basal energy, and never edits another app's data. It can also <em>read</em> a set of Health values, requested in context (for example, Body trends or the Apple Fitness connection), and only after you allow it.</li>
   <li>The only thing that leaves your device is the <strong>subscription purchase itself</strong>, which is handled entirely by Apple. Incline never sees your name, email, or payment details.</li>
 </ul>
 </div>
@@ -117,7 +117,7 @@
 <p>Apple Health is optional. Incline works completely without it, and every figure in the app is calculated by Incline itself, not read from Health.</p>
 
 <h3>What Incline writes</h3>
-<p>If you grant write permission <em>and</em> you have an active Incline Plus subscription, finishing a session can write <strong>one indoor running workout</strong> to Apple Health, together with:</p>
+<p>If you grant write permission, finishing a session writes <strong>one indoor running workout</strong> to Apple Health, together with:</p>
 <table>
   <thead><tr><th>Health type</th><th>What Incline writes</th></tr></thead>
   <tbody>
@@ -126,26 +126,32 @@
     <tr><td>Walking + Running Distance</td><td>The belt distance for that session.</td></tr>
   </tbody>
 </table>
-<p>Incline never writes <strong>resting or basal energy</strong>. Its estimate is active energy only, so requesting basal would be both unnecessary and misleading. It never modifies or deletes a sample written by another app, and it never writes anything you did not record in Incline.</p>
+<p>Incline never writes <strong>resting or basal energy</strong>. Its estimate is active energy only, so requesting basal would be both unnecessary and misleading. It never modifies or deletes a sample written by another app, and it never writes anything you did not record in Incline. Writing is free on every plan and does not require an Incline Plus subscription.</p>
 
 <h3>What Incline asks to read</h3>
-<p>Reading is <strong>separate from writing</strong>, optional, and used by exactly one screen: <strong>Body trends</strong>, reached from Insights. If you never open it, Incline never asks.</p>
-<p>When you do open it, Incline asks permission to read:</p>
+<p>Reading is <strong>separate from writing</strong>, optional, and requested in context — for example when you open <strong>Body trends</strong>, or when you connect the <strong>Apple Fitness</strong> integration to import treadmill workouts. Incline only asks for a given read permission when you use the screen or feature that needs it.</p>
+<p>Depending on what you use, Incline asks permission to read:</p>
 <table>
   <thead><tr><th>What</th><th>Why</th></tr></thead>
   <tbody>
     <tr><td>Resting heart rate, walking heart rate average, heart rate variability (SDNN), VO&#8322;&nbsp;max</td><td>Shown as trends over time beside your treadmill sessions.</td></tr>
     <tr><td>Step count, active energy</td><td>Daily totals, so a treadmill session can be seen in the context of the whole day.</td></tr>
     <tr><td>Heart rate</td><td>The heart-rate curve recorded during a workout. A daily average would destroy the shape of it.</td></tr>
-    <tr><td>Workouts</td><td>So that &ldquo;workout days&rdquo; can include sessions recorded by Apple&nbsp;Watch and other apps, rather than only the ones you recorded in Incline.</td></tr>
+    <tr><td>Workouts</td><td>So that &ldquo;workout days&rdquo; can include sessions recorded by Apple&nbsp;Watch and other apps, and so treadmill workouts you complete in Apple Fitness (from Library &rarr; Use in Apple Fitness) can be imported and matched into Incline's own history.</td></tr>
     <tr><td>Body mass</td><td>So the calorie estimate can be personalised. In this version the figure Incline actually uses is the weight you enter in its own settings.</td></tr>
   </tbody>
 </table>
 <p>Everything Incline reads is <strong>displayed back to you and nothing else</strong>. It is not combined into a profile, not used to score, rate, or predict anything about your health, and &mdash; because Incline contains no networking code at all &mdash; it cannot be sent anywhere. It is never used for advertising or marketing, and it is never shared with a third party, because there is no third party and no channel to share it over.</p>
-<p>Reading is <strong>read-only</strong>. Incline never modifies or deletes a sample written by another app, and HealthKit gives it no way to do so with read permission. Declining the read request leaves the whole of the rest of the app working exactly as before: every figure Incline calculates comes from the speed and grade you entered, never from Apple&nbsp;Health.</p>
+<p>Reading is <strong>read-only</strong>. Incline never modifies or deletes a sample written by another app, and HealthKit gives it no way to do so with read permission. Declining a read request leaves the rest of the app working exactly as before: every figure Incline calculates comes from the speed and grade you entered, never from Apple&nbsp;Health.</p>
+
+<h3>Scheduling workouts (WorkoutKit)</h3>
+<p>If you tap <strong>Connect &amp; sync</strong>, Incline can schedule your Incline plans as workouts in the Fitness app, using Apple's WorkoutKit. This is separate from the Health read/write permissions above, uses Apple's on-device scheduling APIs, and involves no networking of Incline's own.</p>
 
 <h3>Turning it off, and deleting</h3>
 <p>You control Health permission at any time in the Health app: your profile &rarr; <strong>Privacy &rarr; Apps &rarr; Incline</strong>. Revoking it stops all future writes and all future reads. Anything Incline already wrote stays in Apple&nbsp;Health until you delete it there &mdash; read permission does not let Incline remove a Health workout, including one it wrote itself.</p>
+
+<h2>Sign in with Apple</h2>
+<p>Sign in with Apple is optional and found in Settings. If you use it, Incline stores only the name or identifier Apple provides — on this iPhone, in the device keychain. There is no Incline server and no Incline account behind it; nothing about it is transmitted to us or to any third party. You can revoke or delete it at any time from Settings.</p>
 
 <h2>Subscriptions and the App Store</h2>
 <p>Incline Plus is an auto-renewing subscription sold through Apple's In-App Purchase system. The purchase, the payment, the renewal, and any refund are handled entirely by Apple.</p>
