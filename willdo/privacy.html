@@ -33,10 +33,14 @@ settings, is saved locally using Apple's on-device database. The developer canno
 see or retrieve it. Willdo does not sync through iCloud.</p>
 <h2>Apple services Willdo relies on</h2>
 <ul>
-<li><strong>Calendar (EventKit):</strong> with your permission, Willdo reads your calendar events so
-  it can show how much of your day is already committed. Access is <strong>read-only</strong>;
-  Willdo never creates, edits, or deletes calendar events. Event details are used only
-  on your device.</li>
+<li><strong>Calendar (EventKit):</strong> with your permission, Willdo reads events from the calendars
+  you choose so it can show how much of your day is already committed. Willdo only
+  writes to your calendar if you turn on <strong>Show commitments in Calendar</strong> (part of
+  Willdo Plus). Then it adds each commitment as an event in its own calendar named
+  "Willdo" (or, if you choose a separate calendar for each Area, one named after that
+  Area, such as "Willdo – Work"), and moves or removes those events when the
+  commitment changes. It never edits or deletes any other event, and turning the
+  setting off removes Willdo's events. Event details are used only on your device.</li>
 <li><strong>Notifications:</strong> if you turn on reminders, Willdo schedules <strong>local</strong> notifications
   on your device. Nothing is sent through a push server.</li>
 <li><strong>Apple Intelligence:</strong> features such as the weekly plan run with Apple's
@@ -53,7 +57,7 @@ see or retrieve it. Willdo does not sync through iCloud.</p>
 <h2>Your control</h2>
 <ul>
 <li><strong>Delete account:</strong> in Willdo's Settings, scroll to the bottom and tap Delete account. This removes
-  all tasks, lists, groups, and evening reviews, and your stored name, email, and
+  all tasks, lists, areas, and evening reviews, and your stored name, email, and
   sign-in from your device, and returns you to the sign-in screen. Your app
   preferences, such as working hours, stay. Because everything is local, nothing remains
   on a server. To also stop Willdo from using your Apple ID, open Settings on your
